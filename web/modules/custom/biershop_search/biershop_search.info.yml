@@ -1,0 +1,5 @@
+name: Biershop search
+type: module
+description: Sends public product searches to the beer catalog.
+package: Custom
+core_version_requirement: ^10 || ^11

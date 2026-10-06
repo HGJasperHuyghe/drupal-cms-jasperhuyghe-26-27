@@ -11,14 +11,45 @@ declare(strict_types=1);
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
 function biershop_thema_preprocess_html(array &$variables): void {
+  $current_path = trim(\Drupal::request()->getPathInfo(), '/');
+  $front_path = trim((string) \Drupal::config('system.site')->get('page.front'), '/');
 
+  if ($current_path === '' || $current_path === $front_path) {
+    $variables['page']['#prefix'] = \Drupal\Core\Render\Markup::create(biershop_thema_age_gate_markup() . ($variables['page']['#prefix'] ?? ''));
+  }
+}
+
+/**
+ * Returns the homepage age gate markup.
+ */
+function biershop_thema_age_gate_markup(): string {
+  return '<div class="biershop-age-gate" data-age-gate role="dialog" aria-modal="true" aria-labelledby="biershop-age-gate-title">
+    <div class="biershop-age-gate__panel">
+      <p class="biershop-age-gate__eyebrow">Verantwoord genieten</p>
+      <h2 id="biershop-age-gate-title">Ben je 18 jaar of ouder?</h2>
+      <p>Je moet 18 jaar of ouder zijn om deze webshop te bezoeken.</p>
+      <div class="biershop-age-gate__actions">
+        <button type="button" class="btn btn-primary" data-age-gate-confirm>Ja, ik ben 18+</button>
+        <button type="button" class="btn btn-secondary" data-age-gate-decline>Nee</button>
+      </div>
+      <p class="biershop-age-gate__notice" data-age-gate-notice hidden>Je moet 18 jaar of ouder zijn om verder te gaan.</p>
+    </div>
+  </div>';
 }
 
 /**
  * Implements hook_preprocess_HOOK() for page.html.twig.
  */
 function biershop_thema_preprocess_page(array &$variables): void {
+  $current_path = trim(\Drupal::request()->getPathInfo(), '/');
+  $front_path = trim((string) \Drupal::config('system.site')->get('page.front'), '/');
 
+  if ($current_path !== '' && $current_path !== $front_path) {
+    return;
+  }
+
+  $age_gate_markup = biershop_thema_age_gate_markup();
+  $variables['page']['#prefix'] = \Drupal\Core\Render\Markup::create($age_gate_markup . ($variables['page']['#prefix'] ?? ''));
 }
 
 /**
@@ -26,4 +57,16 @@ function biershop_thema_preprocess_page(array &$variables): void {
  */
 function biershop_thema_preprocess_node(array &$variables): void {
 
+}
+
+/**
+ * Sends the global search form to the public beer catalog search.
+ */
+function biershop_thema_form_search_block_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state, string $form_id): void {
+  if (isset($form['keys'])) {
+    $form['keys']['#name'] = 'search_api_fulltext';
+    $form['keys']['#placeholder'] = 'Zoek in onze bieren';
+  }
+
+  $form['#action'] = '/biercatalogus';
 }

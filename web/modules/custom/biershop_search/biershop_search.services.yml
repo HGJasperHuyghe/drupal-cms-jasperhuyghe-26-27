@@ -1,0 +1,5 @@
+services:
+  biershop_search.route_subscriber:
+    class: Drupal\biershop_search\Routing\BiershopSearchRouteSubscriber
+    tags:
+      - { name: event_subscriber }
