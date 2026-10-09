@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - biershop_free_shipping
+    - system
+  theme:
+    - biershop_thema
+id: biershop_thema_free_shipping_progress
+theme: biershop_thema
+region: content
+weight: -3
+provider: null
+plugin: biershop_free_shipping_progress
+settings:
+  id: biershop_free_shipping_progress
+  label: 'Gratis levering'
+  label_display: '0'
+  provider: biershop_free_shipping
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/cart'

@@ -295,6 +295,7 @@ main { min-height: 50vh; }
 
 .view-biercatalogus .field--name-field-productafbeelding,
 .commerce-product .field--name-field-productafbeelding,
+.path-product .field--name-field-productafbeelding,
 .view-biercatalogus .views-field-field-productafbeelding {
   align-items: center;
   background: #f5efe6;
@@ -308,6 +309,7 @@ main { min-height: 50vh; }
 
 .view-biercatalogus .field--name-field-productafbeelding img,
 .commerce-product .field--name-field-productafbeelding img,
+.path-product .field--name-field-productafbeelding img,
 .view-biercatalogus .views-field-field-productafbeelding img {
   height: 100%;
   max-height: 100%;
@@ -317,13 +319,23 @@ main { min-height: 50vh; }
 }
 
 .view-biercatalogus .views-field-field-productafbeelding .media,
-.view-biercatalogus .views-field-field-productafbeelding .field--name-field-media-image {
+.view-biercatalogus .views-field-field-productafbeelding .field--name-field-media-image,
+.commerce-product .field--name-field-productafbeelding .field__item,
+.commerce-product .field--name-field-productafbeelding .media,
+.commerce-product .field--name-field-productafbeelding .field--name-field-media-image,
+.path-product .field--name-field-productafbeelding .field__item,
+.path-product .field--name-field-productafbeelding .media,
+.path-product .field--name-field-productafbeelding .field--name-field-media-image {
   align-items: center;
   display: flex;
   height: 100%;
   justify-content: center;
+  padding: 0;
   width: 100%;
 }
+
+/* Product detail page: larger image box than the catalog cards. */
+.path-product .field--name-field-productafbeelding { border-radius: var(--beer-radius); height: 420px; margin-bottom: 1.5rem; }
 
 .views-field-title,
 .field--name-title,
@@ -598,6 +610,7 @@ footer,
   .view-biercatalogus .field--name-field-productafbeelding,
   .commerce-product .field--name-field-productafbeelding,
   .view-biercatalogus .views-field-field-productafbeelding { height: 240px; padding: .75rem; }
+  .path-product .field--name-field-productafbeelding { height: 300px; padding: .75rem; }
   .views-exposed-form .form--inline { display: block; }
   .views-exposed-form .form-item,
   .views-exposed-form .form-actions { margin-bottom: 1rem; }

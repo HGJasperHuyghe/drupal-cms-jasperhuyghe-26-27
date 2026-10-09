@@ -1,0 +1,10 @@
+biershop_free_shipping.settings:
+  type: config_object
+  label: 'Free shipping settings'
+  mapping:
+    enabled:
+      type: boolean
+      label: 'Enabled'
+    threshold:
+      type: field.value.commerce_price
+      label: 'Threshold'

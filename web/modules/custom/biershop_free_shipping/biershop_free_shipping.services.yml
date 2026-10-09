@@ -1,0 +1,15 @@
+services:
+  _defaults:
+    autowire: true
+
+  biershop_free_shipping.calculator:
+    class: Drupal\biershop_free_shipping\FreeShippingCalculator
+  Drupal\biershop_free_shipping\FreeShippingCalculatorInterface: '@biershop_free_shipping.calculator'
+
+  # Runs after promotions (priority 100), so the threshold is checked against
+  # the discounted subtotal, and before commerce_shipping's late processor
+  # (priority -100), which copies shipment adjustments onto the order.
+  biershop_free_shipping.order_processor:
+    class: Drupal\biershop_free_shipping\OrderProcessor\FreeShippingOrderProcessor
+    tags:
+      - { name: commerce_order.order_processor, priority: 0 }

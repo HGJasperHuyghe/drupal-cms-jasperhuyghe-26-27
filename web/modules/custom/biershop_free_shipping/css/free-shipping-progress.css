@@ -1,0 +1,53 @@
+/**
+ * @file
+ * Free shipping progress bar. Uses the biershop_thema tokens when available.
+ */
+
+.free-shipping-progress {
+  background: var(--beer-paper, #fffdf9);
+  border: 1px solid var(--beer-line, #e8ded1);
+  border-radius: var(--beer-radius, 10px);
+  margin-block: 0 1.5rem;
+  padding: 1rem 1.25rem;
+}
+
+.free-shipping-progress__message {
+  color: var(--beer-ink, #201914);
+  margin: 0 0 .6rem;
+}
+
+.free-shipping-progress__message strong {
+  color: var(--beer-amber, #c56a22);
+}
+
+.free-shipping-progress__track {
+  background: #f4e7d3;
+  border-radius: 999px;
+  height: .6rem;
+  overflow: hidden;
+}
+
+.free-shipping-progress__bar {
+  background: linear-gradient(90deg, var(--beer-gold, #e7a83f), var(--beer-amber, #c56a22));
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+  transition: width .4s ease;
+}
+
+.free-shipping-progress--complete {
+  background: #eef5e9;
+  border-color: #cfe1c3;
+}
+
+.free-shipping-progress--complete .free-shipping-progress__message strong {
+  color: #4f7a33;
+}
+
+.free-shipping-progress--complete .free-shipping-progress__bar {
+  background: #6b9a4b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .free-shipping-progress__bar { transition: none; }
+}

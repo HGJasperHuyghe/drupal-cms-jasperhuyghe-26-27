@@ -1,0 +1,4 @@
+administer biershop free shipping:
+  title: 'Administer free shipping'
+  description: 'Change the order subtotal above which shipping is free.'
+  restrict access: true

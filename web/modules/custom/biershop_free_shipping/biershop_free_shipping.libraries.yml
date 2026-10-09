@@ -1,0 +1,4 @@
+progress:
+  css:
+    component:
+      css/free-shipping-progress.css: {}

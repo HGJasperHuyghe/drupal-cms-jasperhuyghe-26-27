@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Free shipping progress bar.
+ *
+ * Available variables:
+ * - qualifies: Whether the cart already qualifies for free shipping.
+ * - remaining: Formatted amount still needed for free shipping.
+ * - threshold: Formatted free shipping threshold.
+ * - percent: Progress towards the threshold, 0-100.
+ */
+#}
+{% set classes = [
+  'free-shipping-progress',
+  qualifies ? 'free-shipping-progress--complete',
+] %}
+<div{{ attributes.addClass(classes) }}>
+  <p class="free-shipping-progress__message" aria-live="polite">
+    {% if qualifies %}
+      {% trans %}Top! Je bestelling wordt <strong>gratis geleverd</strong>.{% endtrans %}
+    {% else %}
+      {% trans %}Nog <strong>{{ remaining }}</strong> tot gratis levering.{% endtrans %}
+    {% endif %}
+  </p>
+  <div class="free-shipping-progress__track"
+       role="progressbar"
+       aria-valuemin="0"
+       aria-valuemax="100"
+       aria-valuenow="{{ percent }}"
+       aria-label="{{ 'Voortgang naar gratis levering vanaf @threshold'|t({'@threshold': threshold}) }}">
+    <span class="free-shipping-progress__bar" style="width: {{ percent }}%"></span>
+  </div>
+</div>

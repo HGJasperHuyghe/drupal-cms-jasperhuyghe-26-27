@@ -1,0 +1,5 @@
+biershop_free_shipping.settings:
+  title: 'Free shipping'
+  description: 'Configure the order subtotal above which shipping is free.'
+  route_name: biershop_free_shipping.settings
+  parent: commerce_shipping.configuration

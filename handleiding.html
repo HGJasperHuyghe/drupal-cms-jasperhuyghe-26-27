@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap');
+
+    :root {
+      --beer-ink: #201914;
+      --beer-muted: #6f6257;
+      --beer-cream: #fbf7ef;
+      --beer-paper: #fffdf9;
+      --beer-amber: #c56a22;
+      --beer-gold: #e7a83f;
+      --beer-dark: #34251d;
+      --beer-line: #e8ded1;
+      --beer-shadow: 0 18px 42px rgba(67, 42, 21, .09);
+      --beer-radius: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--beer-cream);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: var(--beer-ink);
+      font-family: "Mulish", system-ui, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: var(--beer-dark);
+      font-family: "Oswald", "Arial Narrow", sans-serif;
+      font-weight: 700;
+      margin: 0 0 .6em;
+    }
+
+    h1 {
+      font-size: clamp(2.25rem, 5vw, 3.6rem);
+      line-height: 1.05;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      line-height: 1.15;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      line-height: 1.25;
+      margin-top: 1.8em;
+    }
+
+    a {
+      color: var(--beer-amber);
+      text-underline-offset: .18em;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--beer-dark);
+    }
+
+    .usps {
+      background: var(--beer-dark);
+      color: #fff7ea;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      padding: .45rem 1rem;
+      text-align: center;
+    }
+
+    header.site-header {
+      background: var(--beer-paper);
+      border-bottom: 1px solid var(--beer-line);
+      padding: 2.5rem 1rem 2rem;
+    }
+
+    .container {
+      margin-inline: auto;
+      max-width: 960px;
+      padding-inline: 1rem;
+    }
+
+    .lead {
+      color: var(--beer-muted);
+      font-size: 1.1rem;
+      max-width: 60ch;
+    }
+
+    nav.toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      border: 1px solid var(--beer-amber);
+      border-radius: 5px;
+      display: inline-block;
+      font-size: .86rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      padding: .65rem 1.1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background-color .2s ease, transform .2s ease;
+    }
+
+    .btn-primary {
+      background: var(--beer-amber);
+      color: #fff;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--beer-amber);
+    }
+
+    .btn:hover,
+    .btn:focus {
+      background: var(--beer-dark);
+      border-color: var(--beer-dark);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    main {
+      padding-block: 2.5rem 4rem;
+    }
+
+    .card {
+      background: var(--beer-paper);
+      border: 1px solid var(--beer-line);
+      border-radius: var(--beer-radius);
+      box-shadow: var(--beer-shadow);
+      margin-bottom: 2.5rem;
+      padding: clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    .badge {
+      background: #f4e7d3;
+      border-radius: 999px;
+      color: var(--beer-dark);
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 700;
+      margin-bottom: .8rem;
+      padding: .25rem .65rem;
+    }
+
+    .login {
+      background: #f5efe6;
+      border-left: 4px solid var(--beer-gold);
+      border-radius: 6px;
+      display: grid;
+      gap: .25rem 1.5rem;
+      grid-template-columns: max-content 1fr;
+      margin: 1rem 0 1.5rem;
+      padding: 1rem 1.25rem;
+    }
+
+    .login dt {
+      color: var(--beer-muted);
+      font-weight: 700;
+    }
+
+    .login dd {
+      margin: 0;
+    }
+
+    code,
+    kbd {
+      background: #f4e7d3;
+      border-radius: 4px;
+      font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+      font-size: .9em;
+      padding: .1em .35em;
+    }
+
+    ol.steps {
+      counter-reset: step;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ol.steps>li {
+      counter-increment: step;
+      margin-bottom: .9rem;
+      padding-left: 2.6rem;
+      position: relative;
+    }
+
+    ol.steps>li::before {
+      background: var(--beer-amber);
+      border-radius: 50%;
+      color: #fff;
+      content: counter(step);
+      font-family: "Oswald", sans-serif;
+      font-weight: 700;
+      height: 1.8rem;
+      left: 0;
+      line-height: 1.8rem;
+      position: absolute;
+      text-align: center;
+      top: .05rem;
+      width: 1.8rem;
+    }
+
+    ol.steps ul {
+      margin-top: .4rem;
+    }
+
+    .ui {
+      font-weight: 800;
+      color: var(--beer-dark);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 1rem 0;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--beer-line);
+      padding: .55rem .75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f5efe6;
+      color: var(--beer-dark);
+      font-family: "Oswald", sans-serif;
+      font-weight: 500;
+    }
+
+    .tip,
+    .warn {
+      border-radius: 6px;
+      margin: 1.25rem 0;
+      padding: .9rem 1.1rem;
+    }
+
+    .tip {
+      background: #eef5e9;
+      border-left: 4px solid #6b9a4b;
+    }
+
+    .warn {
+      background: #fbeee2;
+      border-left: 4px solid var(--beer-amber);
+    }
+
+    .tip strong,
+    .warn strong {
+      color: var(--beer-dark);
+    }
+
+    footer {
+      background: var(--beer-dark);
+      color: #e9dccb;
+      font-size: .85rem;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+
+    @media print {
+
+      .usps,
+      nav.toc {
+        display: none;
+      }
+
+      .card {
+        box-shadow: none;
+        break-inside: avoid-page;
+      }
+
+      body,
+      html {
+        background: #fff;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Handleiding Biershop</h1>
+      <p>Website: <a href="https://cms-jasperhuyghe.ddev.site">https://cms-jasperhuyghe.ddev.site</a> </p>
+    </div>
+  </header>
+  <main class="container">
+    <section class="card" id="inloggen">
+      <h2>Inloggen</h2>
+      <ol class="steps">
+        <li>Ga naar <a
+             href="https://cms-jasperhuyghe.ddev.site/user/login">https://cms-jasperhuyghe.ddev.site/user/login</a>.
+        </li>
+        <li>Vul <span class="ui">Username</span> en <span class="ui">Password</span> in.</li>
+        <li>Klik op <span class="ui">Log in</span>. </li>
+      </ol>
+    </section>
+    <section class="card" id="producten">
+      <h2>Producten beheren</h2>
+      <dl class="login">
+        <dt>Gebruikersnaam</dt>
+        <dd><code>productadmin</code></dd>
+        <dt>Wachtwoord</dt>
+        <dd><code>admin</code></dd>
+        <dt>Startpagina</dt>
+        <dd><a href="https://cms-jasperhuyghe.ddev.site/admin/commerce/products">/admin/commerce/products</a></dd>
+      </dl>
+      <p>Met dit profiel beheer je de bieren in de webshop: toevoegen, aanpassen, prijzen en verpakkingen instellen en
+        verwijderen. Je kan ook nieuwe brouwerijen, bierstijlen en landen van herkomst aanmaken.</p>
+      <h3>Hoe een product in elkaar zit</h3>
+      <p>Een <strong>product</strong> is het bier zelf (naam, omschrijving, stijl, brouwerij, afbeelding&hellip;). De
+        <strong>prijs</strong> hangt niet aan het product, maar aan een <strong>variatie</strong>: één variatie per
+        verpakkingseenheid (<em>Per fles</em>, <em>Krat (6 stuks)</em>, <em>Bak (24 stuks)</em>). Een product zonder
+        variatie kan niet gekocht worden.</p>
+      <h3 id="product-toevoegen">Een product toevoegen</h3>
+      <ol class="steps">
+        <li>Ga naar <span class="ui">Commerce &rsaquo; Products</span> (<code>/admin/commerce/products</code>) en klik
+          op <span class="ui">+ Add product</span>.</li>
+        <li>Vul de velden in: <div class="table-wrap">
+            <table>
+              <tr>
+                <th>Veld</th>
+                <th>Wat vul je in?</th>
+              </tr>
+              <tr>
+                <td><span class="ui">Title</span> *</td>
+                <td>Naam van het bier, bv. <em>Duvel 33cl</em>.</td>
+              </tr>
+              <tr>
+                <td><span class="ui">Body</span></td>
+                <td>De omschrijving die klanten zien op de productpagina. Deze tekst wordt ook doorzocht door de
+                  zoekfunctie.</td>
+              </tr>
+              <tr>
+                <td><span class="ui">Bierstijl</span></td>
+                <td>Begin te typen en kies een bestaande stijl uit de lijst (bv. <em>Tripel</em>). Bestaat de stijl nog
+                  niet? Zie <a href="#termen">Nieuwe brouwerij, stijl of land</a>.</td>
+              </tr>
+              <tr>
+                <td><span class="ui">Brouwerij</span></td>
+                <td>Begin te typen en kies de brouwerij uit de lijst.</td>
+              </tr>
+              <tr>
+                <td><span class="ui">Land van herkomst</span></td>
+                <td>Begin te typen en kies het land uit de lijst.</td>
+              </tr>
+              <tr>
+                <td><span class="ui">Alcoholpercentage</span> *</td>
+                <td>Enkel het getal, met een punt als decimaalteken: <code>8.5</code>.</td>
+              </tr>
+              <tr>
+                <td><span class="ui">Inhoud</span></td>
+                <td>Bv. <em>33cl</em> of <em>25cl</em>.</td>
+              </tr>
+              <tr>
+                <td><span class="ui">Productafbeelding</span></td>
+                <td>Klik op <span class="ui">Add media</span></td>
+              </tr>
+              <tr>
+                <td><span class="ui">Published</span></td>
+                <td>Aangevinkt = zichtbaar in de webshop. Laat uitgevinkt zolang het product nog niet klaar is.</td>
+              </tr>
+            </table>
+          </div> Velden met een * zijn verplicht. </li>
+        <li>Klik op <span class="ui">Save and add variations</span>. Het product wordt opgeslagen en je komt op het
+          tabblad <span class="ui">Variations</span>.</li>
+        <li>Klik op <span class="ui">+ Add variation</span> en vul in: <ul>
+            <li><span class="ui">SKU</span> * &ndash; een unieke artikelcode, bv. <code>DUVEL-33-BAK24</code>.</li>
+            <li><span class="ui">Price</span> * &ndash; de verkoopprijs in euro, met een punt als decimaalteken:
+              <code>39.90</code>. Typ geen duizendtalscheidingsteken.</li>
+            <li><span class="ui">List price</span></li>
+            <li><span class="ui">Verpakkingseenheid</span> * &ndash; <em>Per fles</em>, <em>Krat (6 stuks)</em> of
+              <em>Bak (24 stuks)</em>.</li>
+            <li><span class="ui">Published</span> &ndash; aangevinkt laten.</li>
+          </ul>
+        </li>
+        <li>Klik op <span class="ui">Save</span>. Herhaal stap 4&ndash;5 voor elke verpakkingseenheid die je wil
+          verkopen.</li>
+        <li>Controleer het resultaat via het tabblad <span class="ui">View</span> of in de <a
+             href="https://cms-jasperhuyghe.ddev.site/biercatalogus">biercatalogus</a>.</li>
+      </ol>
+      <h3 id="product-aanpassen">Een product aanpassen</h3>
+      <ol class="steps">
+        <li>Ga naar <code>/admin/commerce/products</code>. Zoek het product eventueel via het veld <span
+                class="ui">Title</span> en klik op <span class="ui">Filter</span>.</li>
+        <li>Klik bij het product op <span class="ui">Edit</span>.</li>
+        <li>Pas de gewenste velden aan en klik op <span class="ui">Save</span>.</li>
+      </ol>
+      <p><strong>Prijs of verpakking wijzigen?</strong> Dat doe je in de variatie:</p>
+      <ol class="steps">
+        <li>Klik in het productoverzicht op het pijltje naast <span class="ui">Edit</span> en kies <span
+                class="ui">Variations</span> (of open het product en klik op het tabblad <span
+                class="ui">Variations</span>).</li>
+        <li>Klik bij de juiste verpakking op <span class="ui">Edit</span>, pas <span class="ui">Price</span> aan en klik
+          op <span class="ui">Save</span>.</li>
+        <li>Een verpakking tijdelijk niet meer verkopen? Vink <span class="ui">Published</span> uit in plaats van de
+          variatie te verwijderen.</li>
+      </ol>
+      <h3 id="product-verwijderen">Een product verwijderen</h3>
+      <ol class="steps">
+        <li>Ga naar <code>/admin/commerce/products</code>.</li>
+        <li>Klik op het pijltje naast <span class="ui">Edit</span> bij het product en kies <span
+                class="ui">Delete</span>.</li>
+        <li>Bevestig met <span class="ui">Delete</span>. Klik op <span class="ui">Cancel</span> als je je bedacht hebt.
+        </li>
+      </ol>
+      <h3 id="termen">Nieuwe brouwerij, bierstijl of land toevoegen</h3>
+      <p>De velden Bierstijl, Brouwerij en Land van herkomst tonen alleen waarden die al bestaan. Een nieuwe waarde maak
+        je eerst aan:</p>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>Nieuwe&hellip;</th>
+            <th>Ga naar</th>
+          </tr>
+          <tr>
+            <td>Brouwerij</td>
+            <td><code>/admin/structure/taxonomy/manage/brouwerij/add</code></td>
+          </tr>
+          <tr>
+            <td>Bierstijl</td>
+            <td><code>/admin/structure/taxonomy/manage/bierstijl/add</code></td>
+          </tr>
+          <tr>
+            <td>Land van herkomst</td>
+            <td><code>/admin/structure/taxonomy/manage/land_van_herkomst/add</code></td>
+          </tr>
+        </table>
+      </div>
+      <p>Vul de <span class="ui">Name</span> in en klik op <span class="ui">Save</span>. Daarna kan je de nieuwe waarde
+        kiezen bij het product.</p>
+    </section>
+    <section class="card" id="content">
+      <span class="badge">Profiel: Blogbeheerder</span>
+      <h2>Blogberichten en pagina's beheren</h2>
+      <dl class="login">
+        <dt>Gebruikersnaam</dt>
+        <dd><code>content</code></dd>
+        <dt>Wachtwoord</dt>
+        <dd><code>admin</code></dd>
+        <dt>Startpagina</dt>
+        <dd><a href="https://cms-jasperhuyghe.ddev.site/admin/content">/admin/content</a></dd>
+      </dl>
+      <p>Met dit profiel schrijf en beheer je blogberichten en pas je de pagina's van de website aan (zoals
+        <em>Home</em>, <em>Over ons</em> en <em>Webshop</em>).</p>
+      <h3>Het inhoudsoverzicht</h3>
+      <p>Via <span class="ui">Content</span> (<code>/admin/content</code>) zie je alle blogberichten en pagina's. Met de
+        filters bovenaan zoek je op <span class="ui">Title</span>, <span class="ui">Content type</span> of <span
+              class="ui">Published status</span>. Klik daarna op <span class="ui">Filter</span>.</p>
+      <h3 id="blog-toevoegen">Een blogbericht toevoegen</h3>
+      <ol class="steps">
+        <li>Ga naar <code>/admin/content</code>, klik op <span class="ui">+ Add content</span> en kies <span
+                class="ui">Blogbericht</span> </li>
+        <li>Vul de <span class="ui">Title</span> in: de titel van je artikel.</li>
+        <li>Bij <span class="ui">Header afbeelding</span> * klik je op <span class="ui">Choose file</span> / <span
+                class="ui">Add a new file</span> en kies je een liggende foto (png, jpg, jpeg, gif of webp). Vul daarna
+          de verplichte <span class="ui">Alternative text</span> in: een korte beschrijving van wat er op de foto staat.
+        </li>
+        <li>Schrijf je artikel in <span class="ui">Artikeltekst</span>. Met de knoppen van de editor maak je tekst
+          <strong>vet</strong> of <em>cursief</em>, voeg je tussentitels, lijstjes en links toe. Laat <span
+                class="ui">Text format</span> op <em>Basic HTML</em> staan.</li>
+        <li>
+          <ul>
+          </ul>
+        </li>
+        <li>Klik op <span class="ui">Preview</span> om het bericht eerst te bekijken (via <span class="ui">Back to
+            content editing</span> ga je terug).</li>
+        <li>Vink <span class="ui">Published</span> aan om het bericht meteen online te zetten, of laat het uit om het
+          als concept te bewaren. Klik op <span class="ui">Save</span>.</li>
+      </ol>
+      <h3 id="blog-aanpassen">Een blogbericht aanpassen of verwijderen</h3>
+      <ol class="steps">
+        <li>Ga naar <code>/admin/content</code> en zoek het bericht.</li>
+        <li><strong>Aanpassen:</strong> klik op <span class="ui">Edit</span>, wijzig wat nodig is, vul eventueel een
+          <span class="ui">Revision log message</span> in (korte notitie van wat je wijzigde) en klik op <span
+                class="ui">Save</span>.</li>
+        <li><strong>Offline halen:</strong> klik op <span class="ui">Edit</span>, vink <span class="ui">Published</span>
+          uit en klik op <span class="ui">Save</span>.</li>
+        <li><strong>Verwijderen:</strong> klik op het pijltje naast <span class="ui">Edit</span>, kies <span
+                class="ui">Delete</span> en bevestig met <span class="ui">Delete</span>. </li>
+      </ol>
+      <h3 id="paginas">Pagina's aanpassen</h3>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>Pagina</th>
+            <th>Adres</th>
+            <th>Bewerken</th>
+          </tr>
+          <tr>
+            <td>Home</td>
+            <td><code>/home</code></td>
+            <td><code>/node/16/edit</code></td>
+          </tr>
+          <tr>
+            <td>Over ons</td>
+            <td><code>/over-ons</code></td>
+            <td><code>/node/2/edit</code></td>
+          </tr>
+          <tr>
+            <td>Webshop</td>
+            <td><code>/webshop</code></td>
+            <td><code>/node/5/edit</code></td>
+          </tr>
+        </table>
+      </div>
+      <ol class="steps">
+        <li>Open de pagina op de website en klik op het tabblad <span class="ui">Edit</span> (of ga naar
+          <code>/admin/content</code> en klik daar op <span class="ui">Edit</span>).</li>
+        <li>Pas de <span class="ui">Title</span> en de tekst aan.</li>
+        <li>Klik op <span class="ui">Save</span>.</li>
+      </ol>
+      <p><strong>Nieuwe pagina toevoegen:</strong> ga naar <span class="ui">+ Add content</span> en kies <span
+              class="ui">normal_page</span>. Vul <span class="ui">Title</span> en <span class="ui">paragraph</span> in,
+        geef een <span class="ui">URL alias</span> op (bv. <code>/contact</code>) en klik op <span
+              class="ui">Save</span>.</p>
+    </section>
+  </main>
+  <footer> Handleiding Biershop</footer>
+</body>
+
+</html>

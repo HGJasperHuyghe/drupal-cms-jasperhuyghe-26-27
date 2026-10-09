@@ -1,0 +1,7 @@
+biershop_free_shipping.settings:
+  path: '/admin/commerce/config/shipping/free-shipping'
+  defaults:
+    _form: '\Drupal\biershop_free_shipping\Form\FreeShippingSettingsForm'
+    _title: 'Free shipping'
+  requirements:
+    _permission: 'administer biershop free shipping'

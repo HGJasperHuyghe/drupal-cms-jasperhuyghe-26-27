@@ -1,0 +1,4 @@
+enabled: true
+threshold:
+  number: '50'
+  currency_code: EUR

@@ -1,0 +1,11 @@
+name: Biershop free shipping
+type: module
+description: Waives shipping costs above a configurable order subtotal and shows customers how far they are from free shipping.
+package: Custom
+core_version_requirement: ^11.1
+configure: biershop_free_shipping.settings
+dependencies:
+  - commerce:commerce_cart
+  - commerce:commerce_price
+  - commerce:commerce_store
+  - commerce_shipping:commerce_shipping
