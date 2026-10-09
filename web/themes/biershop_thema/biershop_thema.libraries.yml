@@ -4,8 +4,10 @@ global:
     js/biershop-thema.js: {}
   css:
     base:
+      css/base.css: {}
       css/base/elements.css: {}
     component:
+      css/components.css: {}
       css/component/block.css: {}
       css/component/breadcrumb.css: {}
       css/component/field.css: {}
@@ -19,6 +21,7 @@ global:
       css/component/tabs.css: {}
       css/component/buttons.css: {}
     layout:
+      css/Layout.css: {}
       css/layout/layout.css: {}
     theme:
       css/theme/biershop.css: {}

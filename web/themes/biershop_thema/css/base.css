@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --beer-ink: #201914;
+  --beer-muted: #6f6257;
+  --beer-cream: #fbf7ef;
+  --beer-paper: #fffdf9;
+  --beer-amber: #c56a22;
+  --beer-gold: #e7a83f;
+  --beer-dark: #34251d;
+  --beer-line: #e8ded1;
+  --beer-shadow: 0 18px 42px rgba(67, 42, 21, .09);
+  --beer-radius: 10px;
+}
+
+html { background: var(--beer-cream); scroll-behavior: smooth; }
+
+body {
+  background: var(--beer-cream);
+  color: var(--beer-ink);
+  font-family: "Mulish", sans-serif;
+  line-height: 1.6;
+}
+
+body,
+.dialog-off-canvas-main-canvas,
+.page-wrapper { display: flex; flex-direction: column; min-height: 100vh; }
+
+main,
+.main-container,
+.layout-main-wrapper { flex: 1 0 auto; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.site-name {
+  color: var(--beer-dark);
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+h1 { font-size: clamp(2.25rem, 5vw, 4.4rem); line-height: 1.05; }
+h2 { font-size: clamp(1.8rem, 3vw, 2.7rem); line-height: 1.15; }
+h3 { font-size: 1.45rem; line-height: 1.25; }
+
+a { color: var(--beer-amber); text-underline-offset: .18em; }
+a:hover,
+a:focus { color: var(--beer-dark); }
+
+.container,
+.container-fluid { --bs-gutter-x: 2rem; }
+
+@media (max-width: 767.98px) {
+  .container,
+  .container-fluid { --bs-gutter-x: 1.25rem; }
+}

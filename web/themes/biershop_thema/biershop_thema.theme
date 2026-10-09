@@ -38,18 +38,67 @@ function biershop_thema_age_gate_markup(): string {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for page.html.twig.
+ * Removes implementation labels from utility blocks.
+ */
+function biershop_thema_preprocess_block(array &$variables): void {
+  $plugin_id = (string) ($variables['plugin_id'] ?? '');
+
+  if ($plugin_id === 'search_form_block' || str_contains($plugin_id, 'commerce_cart')) {
+    $variables['label'] = '';
+  }
+}
+
+/**
+ * Keeps the primary navigation focused on the brand and its information.
+ */
+function biershop_thema_preprocess_menu__main(array &$variables): void {
+  foreach ($variables['items'] as $key => $item) {
+    if (mb_strtolower(trim((string) ($item['title'] ?? ''))) === 'webshop') {
+      unset($variables['items'][$key]);
+    }
+  }
+}
+
+/**
+ * Adds editorial context to the front page and the about page.
  */
 function biershop_thema_preprocess_page(array &$variables): void {
-  $current_path = trim(\Drupal::request()->getPathInfo(), '/');
+  $path = trim((string) \Drupal::request()->getPathInfo(), '/');
   $front_path = trim((string) \Drupal::config('system.site')->get('page.front'), '/');
 
-  if ($current_path !== '' && $current_path !== $front_path) {
-    return;
-  }
+  if ($path === $front_path || ($path === '' && $front_path === '')) {
+    $variables['page']['content']['biershop_home_intro'] = [
+      '#type' => 'container',
+      '#attributes' => ['class' => ['biershop-editorial', 'biershop-editorial--home']],
+      'eyebrow' => ['#markup' => '<p class="biershop-editorial__eyebrow">Ontdek met aandacht</p>'],
+      'title' => ['#markup' => '<h2>Karakter in elk glas</h2>'],
+      'text' => ['#markup' => '<p>Van frisse ontdekkingen tot diep gerijpte klassiekers: wij selecteren bieren met een verhaal. Vind jouw volgende favoriet op basis van stijl, brouwerij en smaak.</p>'],
+      'link' => ['#markup' => '<a class="btn btn-primary" href="/biercatalogus">Bekijk onze selectie</a>'],
+    ];
 
-  $age_gate_markup = biershop_thema_age_gate_markup();
-  $variables['page']['#prefix'] = \Drupal\Core\Render\Markup::create($age_gate_markup . ($variables['page']['#prefix'] ?? ''));
+    $variables['page']['content']['biershop_home_highlights'] = [
+        '#type' => 'container',
+        '#attributes' => ['class' => ['biershop-highlights']],
+        'title' => ['#markup' => '<div class="biershop-section-heading"><p class="biershop-editorial__eyebrow">Waarom bierliefhebbers hier komen</p><h2>Gekozen voor nieuwsgierige proevers</h2></div>'],
+        'items' => ['#markup' => '<div class="biershop-highlights__grid"><article class="biershop-highlight"><h3>Een selectie met karakter</h3><p>Van vertrouwde Belgische klassiekers tot verrassende brouwsels: elk bier krijgt een plek omdat het iets bijzonders te vertellen heeft.</p></article><article class="biershop-highlight"><h3>Vind wat bij je past</h3><p>Filter op stijl, brouwerij en alcoholpercentage en ontdek sneller een bier dat aansluit bij jouw smaak en moment.</p></article><article class="biershop-highlight"><h3>Bewust genieten</h3><p>Goed bier drink je met aandacht. Neem de tijd om te proeven en geniet verantwoordelijk, thuis of samen met vrienden.</p></article></div>'],
+      ];
+
+      $variables['page']['content']['biershop_home_cta'] = [
+        '#type' => 'container',
+        '#attributes' => ['class' => ['biershop-home-cta']],
+        'content' => ['#markup' => '<h2>Klaar om iets nieuws te ontdekken?</h2><p>Laat je inspireren door onze catalogus en maak van je volgende proefmoment een verhaal.</p><a class="btn btn-primary" href="/biercatalogus">Naar de biercatalogus</a>'],
+    ];
+
+    }
+
+  if (in_array($path, ['over-ons', 'overons'], TRUE)) {
+    $variables['page']['content']['biershop_editorial_about'] = [
+      '#type' => 'container',
+      '#attributes' => ['class' => ['biershop-editorial', 'biershop-editorial--about']],
+      'title' => ['#markup' => '<h2>Passie voor bier, ruimte voor ontdekking</h2>'],
+      'text' => ['#markup' => '<p>Wij geloven dat goed bier mensen samenbrengt. Daarom zoeken we brouwerijen die met zorg werken, vertellen we eerlijk over smaak en helpen we je graag kiezen zonder ingewikkeld gedoe.</p><p>Drink bewust, proef nieuwsgierig en ontdek een bier dat bij jouw moment past.</p>'],
+    ];
+  }
 }
 
 /**

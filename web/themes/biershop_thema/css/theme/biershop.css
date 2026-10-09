@@ -19,7 +19,7 @@ html {
 body {
   min-height: 100vh;
   color: var(--beer-ink);
-  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-family: "Mulish", sans-serif;
   line-height: 1.6;
 }
 
@@ -40,7 +40,7 @@ h6,
 .navbar-brand,
 .site-name {
   color: var(--beer-dark);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   letter-spacing: 0;
 }
@@ -112,6 +112,34 @@ header[role="banner"] {
 .navbar,
 .region-header { padding-block: 1rem; }
 
+.region-header {
+  align-items: center;
+  column-gap: 1.25rem;
+  display: flex !important;
+  flex-wrap: wrap;
+  row-gap: .75rem;
+}
+.region-header > .block { margin: 0; }
+.region-header > [id$="-headerusps"] {
+  flex-basis: 100%;
+  order: 10;
+}
+.region-header .search-block-form,
+.region-header .block-search,
+.region-header .cart--cart-block,
+.region-header .block-commerce-cart,
+.region-header .commerce-cart-block { flex: 0 0 auto; }
+.region-header > .block:has(.search-block-form),
+.region-header > .block:has(form.search-form),
+.region-header > .search-block-form,
+.region-header > .block-search { margin-inline-start: auto; order: 20; }
+.region-header > .block:has(.cart--cart-block),
+.region-header > .block:has(.block-commerce-cart),
+.region-header > .block:has(.commerce-cart-block),
+.region-header > .cart--cart-block,
+.region-header > .block-commerce-cart,
+.region-header > .commerce-cart-block { margin-inline-start: 0; order: 21; }
+
 .navbar-brand,
 .site-name { font-size: 1.55rem; text-decoration: none; }
 
@@ -137,6 +165,41 @@ header[role="banner"] {
 .region-primary-menu a:hover,
 .region-primary-menu a:focus,
 .navbar-nav .nav-link.is-active { border-color: var(--beer-amber); color: var(--beer-amber); }
+
+.navbar-collapse { align-items: center; gap: 1.5rem; }
+.region-primary-menu,
+.region-secondary-menu { align-items: center; display: flex; gap: 1rem; }
+.region-primary-menu > .block,
+.region-secondary-menu > .block { margin: 0; }
+.navbar > .container,
+.navbar > .container-fluid { align-items: center; display: flex; gap: 1.25rem; }
+.navbar .region-primary-menu { margin-inline-start: 0; }
+.navbar .region-secondary-menu { margin-inline-start: auto; }
+.navbar .region-secondary-menu .block-search,
+.navbar .region-secondary-menu .search-block-form,
+.navbar .region-secondary-menu .block-commerce-cart,
+.navbar .region-secondary-menu .commerce-cart-block,
+.navbar .region-secondary-menu .cart--cart-block { flex: 0 0 auto; }
+.region-secondary-menu .search-block-form form { align-items: center; display: flex; gap: .5rem; }
+.region-secondary-menu .block-commerce-cart,
+.region-secondary-menu .commerce-cart-block,
+.region-secondary-menu .cart--cart-block { margin-left: .5rem; }
+
+header[role="banner"] .navbar > .container,
+header[role="banner"] .navbar > .container-fluid { align-items: center; gap: 1.25rem; }
+header[role="banner"] .block-search,
+header[role="banner"] .search-block-form,
+header[role="banner"] .block-commerce-cart,
+header[role="banner"] .commerce-cart-block,
+header[role="banner"] .cart--cart-block { margin-inline-start: 1rem; }
+header[role="banner"] .block-search form,
+header[role="banner"] .search-block-form form { margin: 0; }
+
+header[role="banner"] .block-search,
+header[role="banner"] .search-block-form,
+header[role="banner"] .block-commerce-cart,
+header[role="banner"] .commerce-cart-block,
+header[role="banner"] .cart--cart-block { flex: 0 0 auto; }
 
 .breadcrumb { background: transparent; color: var(--beer-muted); font-size: .88rem; padding-block: 1rem; }
 .breadcrumb-item + .breadcrumb-item::before { color: var(--beer-gold); }
@@ -226,12 +289,45 @@ main { min-height: 50vh; }
 
 .views-field-field-image img,
 .field--name-field-image img,
+.field--name-field-productafbeelding img,
 .product-card img,
 .commerce-product img { display: block; height: auto; max-height: 280px; object-fit: cover; width: 100%; }
 
+.view-biercatalogus .field--name-field-productafbeelding,
+.commerce-product .field--name-field-productafbeelding,
+.view-biercatalogus .views-field-field-productafbeelding {
+  align-items: center;
+  background: #f5efe6;
+  display: flex;
+  height: 280px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+}
+
+.view-biercatalogus .field--name-field-productafbeelding img,
+.commerce-product .field--name-field-productafbeelding img,
+.view-biercatalogus .views-field-field-productafbeelding img {
+  height: 100%;
+  max-height: 100%;
+  max-width: 92%;
+  object-fit: contain;
+  width: auto;
+}
+
+.view-biercatalogus .views-field-field-productafbeelding .media,
+.view-biercatalogus .views-field-field-productafbeelding .field--name-field-media-image {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
 .views-field-title,
 .field--name-title,
-.commerce-product__title { font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; font-weight: 700; padding: 1rem 1.25rem .2rem; }
+.commerce-product__title { font-family: "Oswald", sans-serif; font-size: 1.25rem; font-weight: 700; padding: 1rem 1.25rem .2rem; }
 .views-field-title a,
 .commerce-product__title a { color: var(--beer-dark); text-decoration: none; }
 .views-field-title a:hover,
@@ -386,7 +482,7 @@ textarea:focus { border-color: var(--beer-amber); box-shadow: 0 0 0 .2rem rgba(1
 .node__meta { background: #fbf4e8 !important; border: 1px solid #ead9c2; border-radius: 6px; color: var(--beer-muted) !important; margin-top: 0; padding: .75rem 1rem; }
 .comment__meta a,
 .node__meta a { color: var(--beer-amber) !important; }
-.comment .content h3 a { color: var(--beer-dark) !important; font-family: Georgia, "Times New Roman", serif; text-decoration: none; }
+.comment .content h3 a { color: var(--beer-dark) !important; font-family: "Oswald", sans-serif; text-decoration: none; }
 .comment .content h3 a:hover { color: var(--beer-amber) !important; }
 
 .search-block-form form,
@@ -414,12 +510,13 @@ footer a,
 .cart--cart-block {
   align-items: center;
   display: flex;
-  margin-left: auto;
+  margin-left: 1.25rem;
 }
 
 .cart--cart-block > h2 {
+  display: none;
   color: var(--beer-muted);
-  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: .7rem;
   font-weight: 800;
   letter-spacing: .08em;
@@ -460,13 +557,47 @@ footer,
   .container-fluid { --bs-gutter-x: 1.25rem; }
   .navbar,
   .region-header { padding-block: .7rem; }
+  .region-header { align-items: stretch; flex-direction: column; }
+  .region-header > .block,
+  .region-header .search-block-form,
+  .region-header .block-search,
+  .region-header .cart--cart-block,
+  .region-header .block-commerce-cart,
+  .region-header .commerce-cart-block { width: 100%; }
+  .region-header > .block:has(.search-block-form),
+  .region-header > .block:has(form.search-form),
+  .region-header > .search-block-form,
+  .region-header > .block-search { margin-inline-start: 0; order: initial; }
+  .region-header > .block:has(.cart--cart-block),
+  .region-header > .block:has(.block-commerce-cart),
+  .region-header > .block:has(.commerce-cart-block),
+  .region-header > .cart--cart-block,
+  .region-header > .block-commerce-cart,
+  .region-header > .commerce-cart-block { order: initial; }
+  .navbar-collapse { align-items: stretch; gap: .75rem; }
+  .region-primary-menu,
+  .region-secondary-menu { align-items: stretch; flex-direction: column; gap: .75rem; }
+  .navbar .region-primary-menu,
+  .navbar .region-secondary-menu { margin-inline-start: 0; }
+  .region-secondary-menu .block-commerce-cart,
+  .region-secondary-menu .commerce-cart-block,
+  .region-secondary-menu .cart--cart-block { margin-left: 0; }
+  header[role="banner"] .block-search,
+  header[role="banner"] .search-block-form,
+  header[role="banner"] .block-commerce-cart,
+  header[role="banner"] .commerce-cart-block,
+  header[role="banner"] .cart--cart-block { margin-inline-start: 0; }
   .navbar-nav .nav-link,
   .menu--main a,
   .region-primary-menu a { display: block; padding-inline: 0; }
   .views-field-field-image img,
   .field--name-field-image img,
+  .field--name-field-productafbeelding img,
   .product-card img,
   .commerce-product img { max-height: 220px; }
+  .view-biercatalogus .field--name-field-productafbeelding,
+  .commerce-product .field--name-field-productafbeelding,
+  .view-biercatalogus .views-field-field-productafbeelding { height: 240px; padding: .75rem; }
   .views-exposed-form .form--inline { display: block; }
   .views-exposed-form .form-item,
   .views-exposed-form .form-actions { margin-bottom: 1rem; }

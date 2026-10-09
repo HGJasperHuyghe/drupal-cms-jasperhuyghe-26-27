@@ -1,0 +1,55 @@
+
+.biershop-highlights { margin: 3rem 0; }
+.biershop-section-heading { margin-bottom: 1.5rem; }
+.biershop-section-heading h2 { margin: 0; }
+.biershop-highlights__grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.biershop-highlight { background: var(--beer-paper); border: 1px solid var(--beer-line); border-top: 3px solid var(--beer-gold); box-shadow: var(--beer-shadow); padding: 1.5rem; }
+.biershop-highlight h3 { margin-top: 0; }
+.biershop-highlight p { color: var(--beer-muted); margin-bottom: 0; }
+.biershop-home-cta { background: var(--beer-dark); color: #fff7ea; margin: 3rem 0; padding: 2.5rem; }
+.biershop-home-cta h2 { color: #fff7ea; margin-top: 0; }
+.biershop-home-cta p { color: #eadfd2; max-width: 38rem; }
+
+@media (max-width: 767.98px) {
+  .biershop-highlights__grid { grid-template-columns: 1fr; }
+  .biershop-home-cta { padding: 1.75rem; }
+}
+.site-header,
+header[role="banner"] {
+  background: var(--beer-paper);
+  border-bottom: 1px solid var(--beer-line);
+  position: relative;
+  z-index: 10;
+}
+
+.navbar,
+.region-header { padding-block: 1rem; }
+
+.navbar-brand,
+.site-name { font-size: 1.55rem; text-decoration: none; }
+
+.navbar-brand img,
+.site-logo img { max-height: 52px; width: auto; }
+
+main { min-height: 50vh; }
+
+.breadcrumb {
+  background: transparent;
+  color: var(--beer-muted);
+  font-size: .88rem;
+  padding-block: 1rem;
+}
+
+.breadcrumb a { color: var(--beer-dark); text-decoration: none; }
+.breadcrumb a:hover,
+.breadcrumb a:focus { color: var(--beer-amber); }
+.breadcrumb-item + .breadcrumb-item::before { color: var(--beer-gold); }
+
+footer,
+.site-footer,
+.region-footer { flex-shrink: 0; }
+
+@media (max-width: 767.98px) {
+  .navbar,
+  .region-header { padding-block: .7rem; }
+}
