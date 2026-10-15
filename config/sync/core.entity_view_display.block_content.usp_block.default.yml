@@ -1,0 +1,29 @@
+uuid: fa813bbc-80ba-42ce-a72d-361dccde3da3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.usp_block
+    - field.field.block_content.usp_block.field_usps_text
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: block_content.usp_block.default
+targetEntityType: block_content
+bundle: usp_block
+mode: default
+content:
+  field_usps_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,10 @@
+uuid: affdd56b-b22a-409a-8232-ede44b0cdb5b
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: M_Bh81osDyUQ4wV0GgU_NdBNqkzM87sLxjaCdFj9mnw
+id: account
+label: Gebruikersmenu
+description: 'Links gerelateerd aan de actieve gebruikersaccount'
+locked: true

@@ -1,0 +1,24 @@
+uuid: 7f13b7e0-30f8-4c8c-8cf7-5ac98fca4a16
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.storage.comment.comment_body
+    - filter.format.plain_text
+  module:
+    - text
+id: comment.review.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: review
+label: 'Beoordeling & opmerking'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text_long

@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: smwBZIg99NbVBWAM_-rEXcxP3ZZoqwaQ4fjv1ESl_dw
+enabled: true
+threshold:
+  number: '50'
+  currency_code: EUR

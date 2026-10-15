@@ -1,0 +1,22 @@
+uuid: 82a8ef0e-dcdc-4a55-b083-5c88a15dc289
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.homepage
+id: node.homepage.status
+field_name: status
+entity_type: node
+bundle: homepage
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

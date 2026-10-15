@@ -1,0 +1,11 @@
+uuid: 4a5c67eb-3c1a-423c-a7bd-28dc855caf7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blogbericht
+id: node.blogbericht
+target_entity_type_id: node
+target_bundle: blogbericht
+default_langcode: site_default
+language_alterable: false

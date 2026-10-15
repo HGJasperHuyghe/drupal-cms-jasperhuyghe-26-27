@@ -1,0 +1,43 @@
+uuid: 9b8be8b5-9e2c-43ac-8bb1-b6595077d0bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.field.comment.review.comment_body
+  module:
+    - text
+id: comment.review.default
+targetEntityType: comment
+bundle: review
+mode: default
+content:
+  author:
+    weight: -2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

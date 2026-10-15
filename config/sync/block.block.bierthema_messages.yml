@@ -1,0 +1,22 @@
+uuid: da9cdab8-9d96-4b8b-86c8-9da101120ba3
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bierthema
+_core:
+  default_config_hash: OPwBHw84zVLPSbG57h-3QAJtzt50qBLE6WFe09FJnEQ
+id: bierthema_messages
+theme: bierthema
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Berichten
+  label_display: '0'
+  provider: system
+visibility: {  }

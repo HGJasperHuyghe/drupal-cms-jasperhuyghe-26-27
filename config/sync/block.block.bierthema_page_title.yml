@@ -1,0 +1,20 @@
+uuid: 32e90a3c-7cc7-4461-a9d6-1bad670306b4
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - bierthema
+_core:
+  default_config_hash: QOcvvyRvCVHrnTzntwn0Ztb3Kd8RQle1iVlA035y2qg
+id: bierthema_page_title
+theme: bierthema
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: Paginatitel
+  label_display: '0'
+  provider: core
+visibility: {  }

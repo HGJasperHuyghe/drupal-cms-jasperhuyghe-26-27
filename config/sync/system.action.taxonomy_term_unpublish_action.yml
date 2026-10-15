@@ -1,0 +1,13 @@
+uuid: c446394f-611b-4d7e-ad2d-3d5a6f806c3c
+langcode: nl
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: z2sNRM3ECa7FPCGnSNje_9SmZJQgwhD_6fG_L4Mr8zI
+id: taxonomy_term_unpublish_action
+label: 'Taxonomieterm depubliceren'
+type: taxonomy_term
+plugin: 'entity:unpublish_action:taxonomy_term'
+configuration: {  }

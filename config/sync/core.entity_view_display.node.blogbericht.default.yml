@@ -1,0 +1,43 @@
+uuid: ec4ebe38-50e7-454c-91c5-56aae12a317f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blogbericht.field_artikeltekst
+    - field.field.node.blogbericht.field_header_afbeelding
+    - node.type.blogbericht
+  module:
+    - image
+    - text
+    - user
+id: node.blogbericht.default
+targetEntityType: node
+bundle: blogbericht
+mode: default
+content:
+  field_artikeltekst:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_header_afbeelding:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

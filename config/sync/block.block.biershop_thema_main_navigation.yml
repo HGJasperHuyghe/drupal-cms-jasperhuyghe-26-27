@@ -1,0 +1,27 @@
+uuid: 4423f64d-2505-4247-98b6-e898a02e7eb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - biershop_thema
+_core:
+  default_config_hash: Fm7sDs2U1u99MaVOZEZqa-QOJrrUiQMWJb1jMozYO48
+id: biershop_thema_main_navigation
+theme: biershop_thema
+region: header
+weight: -4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

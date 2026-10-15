@@ -1,0 +1,29 @@
+uuid: c212d886-608c-4fcf-8254-1a6ce73c0a2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - field.storage.commerce_product.field_brouwerij
+    - taxonomy.vocabulary.brouwerij
+id: commerce_product.default.field_brouwerij
+field_name: field_brouwerij
+entity_type: commerce_product
+bundle: default
+label: Brouwerij
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      brouwerij: brouwerij
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

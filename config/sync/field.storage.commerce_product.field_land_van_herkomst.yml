@@ -1,0 +1,20 @@
+uuid: 2fce27d7-2237-4eb5-9de8-43a2eeb5e5a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - taxonomy
+id: commerce_product.field_land_van_herkomst
+field_name: field_land_van_herkomst
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

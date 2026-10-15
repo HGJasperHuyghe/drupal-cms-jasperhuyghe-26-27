@@ -1,0 +1,25 @@
+uuid: e22622ae-dc3d-4581-a861-be77f859f90f
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bierthema
+_core:
+  default_config_hash: HYh4NzCVsXX5k7mTEh_DjB2SSnppfacP2PQDjr069VU
+id: bierthema_branding
+theme: bierthema
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Branding van de website'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

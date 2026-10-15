@@ -1,0 +1,23 @@
+uuid: d38eef68-301a-4f42-b39a-cf6e9bf04129
+langcode: nl
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - olivero
+_core:
+  default_config_hash: pbbed0hdqGDF-_QWVVTWRAwgDIotFuAvWH5mWUZu0fA
+id: olivero_search_form_wide
+theme: olivero
+region: secondary_menu
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Zoekformulier (breed)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

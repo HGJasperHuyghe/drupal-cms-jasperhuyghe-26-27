@@ -1,0 +1,11 @@
+uuid: 8f0a4aa5-5396-4dcc-b3bc-dd42cba52e08
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: og55Zu0F-q-X8zG0Ohrls49zws6IrmmosZS-30Es8vw
+id: content_editor
+label: Redacteur
+weight: 2
+is_admin: false
+permissions: {  }

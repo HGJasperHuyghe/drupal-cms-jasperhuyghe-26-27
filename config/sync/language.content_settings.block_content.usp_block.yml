@@ -1,0 +1,11 @@
+uuid: cf6366d1-ac09-4c51-a0dd-93903c6a79b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.usp_block
+id: block_content.usp_block
+target_entity_type_id: block_content
+target_bundle: usp_block
+default_langcode: site_default
+language_alterable: false

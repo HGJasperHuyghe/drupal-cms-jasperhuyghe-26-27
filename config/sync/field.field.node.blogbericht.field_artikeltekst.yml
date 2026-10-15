@@ -1,0 +1,32 @@
+uuid: 992b4b32-0f13-492e-8c41-10abeb07f556
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artikeltekst
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.plain_text
+    - filter.format.restricted_html
+    - node.type.blogbericht
+  module:
+    - text
+id: node.blogbericht.field_artikeltekst
+field_name: field_artikeltekst
+entity_type: node
+bundle: blogbericht
+label: Artikeltekst
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - basic_html
+    - restricted_html
+    - full_html
+    - plain_text
+field_type: text_with_summary

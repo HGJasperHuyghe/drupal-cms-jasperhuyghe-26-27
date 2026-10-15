@@ -1,0 +1,14 @@
+uuid: 8e659a59-f4da-49a6-ab7a-26c02fb93e54
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.productbeheerder
+  module:
+    - user
+id: user_add_role_action.productbeheerder
+label: 'Add the Productbeheerder role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: productbeheerder

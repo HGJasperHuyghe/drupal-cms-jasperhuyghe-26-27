@@ -1,0 +1,10 @@
+uuid: 6389ec6c-1ff0-443c-a040-fa000af4dce3
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
+id: footer
+label: Voet
+description: Websitegegevens-links
+locked: true

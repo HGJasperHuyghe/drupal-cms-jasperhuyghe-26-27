@@ -1,0 +1,23 @@
+uuid: 9fb4055e-f9c6-458f-94b1-b12fb00bb88b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:69b25a8b-4c3d-4ca0-9b06-164dbc0d7581'
+  module:
+    - block_content
+  theme:
+    - biershop_thema
+id: biershop_thema_footerblock
+theme: biershop_thema
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:69b25a8b-4c3d-4ca0-9b06-164dbc0d7581'
+settings:
+  id: 'block_content:69b25a8b-4c3d-4ca0-9b06-164dbc0d7581'
+  label: footerblock
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 0e5c7a72-6a22-42b6-b5c4-f69fa1ab9e6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.reusable_block
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.reusable_block.body
+field_name: body
+entity_type: block_content
+bundle: reusable_block
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

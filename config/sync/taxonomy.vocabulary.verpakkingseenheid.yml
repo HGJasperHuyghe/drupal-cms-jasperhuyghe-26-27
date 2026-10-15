@@ -1,0 +1,9 @@
+uuid: 3a8d3635-7c5a-407d-9bc8-f2130c2a0634
+langcode: en
+status: true
+dependencies: {  }
+name: Verpakkingseenheid
+vid: verpakkingseenheid
+description: 'los per stuk, bak/krat, sixpac'
+weight: 0
+new_revision: false

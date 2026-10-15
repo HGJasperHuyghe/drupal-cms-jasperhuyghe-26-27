@@ -1,0 +1,41 @@
+uuid: b301098e-ab02-4051-831c-286a2ff0acc0
+langcode: nl
+status: true
+dependencies:
+  config:
+    - block_content.type.reusable_block
+    - field.field.block_content.reusable_block.body
+    - field.field.block_content.reusable_block.field_pattern_category
+    - field.field.block_content.reusable_block.field_pattern_sync_status
+  enforced:
+    module:
+      - gutenberg
+_core:
+  default_config_hash: dfreF7bgMVNkND-eIPIua78myqDXCEHNhj-aimToAzg
+id: block_content.reusable_block.default
+targetEntityType: block_content
+bundle: reusable_block
+mode: default
+content:
+  field_pattern_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  body:
+    type: gutenberg_text
+    label: hidden
+    settings:
+      format: gutenberg
+      content_only: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  field_pattern_sync_status: true
+  langcode: true
+  search_api_excerpt: true

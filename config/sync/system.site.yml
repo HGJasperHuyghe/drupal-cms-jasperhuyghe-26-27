@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: nl
+uuid: 7edd76ae-5e4b-4cd5-98a8-c70ee6380315
+name: cms-jasperhuyghe
+mail: info@jasperhuyghe.be
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /home
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: nl
+mail_notification: null

@@ -1,0 +1,28 @@
+uuid: 174ebd38-eb3e-4b9a-8552-9312cad4a524
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.normal_page.field_paragraph
+    - node.type.normal_page
+  module:
+    - user
+id: node.normal_page.default
+targetEntityType: node
+bundle: normal_page
+mode: default
+content:
+  field_paragraph:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

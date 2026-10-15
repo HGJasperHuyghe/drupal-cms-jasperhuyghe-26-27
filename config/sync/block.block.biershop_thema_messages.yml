@@ -1,0 +1,22 @@
+uuid: 5b3626ad-8b83-49b1-9d96-7f57bb7f49ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - biershop_thema
+_core:
+  default_config_hash: 9LdMj38y4GDi23GrIUtIZIV1bJEn1C47N19jrswvcLc
+id: biershop_thema_messages
+theme: biershop_thema
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

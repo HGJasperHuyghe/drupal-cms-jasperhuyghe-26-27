@@ -1,0 +1,26 @@
+uuid: 96275f9a-9dc6-4f13-9c64-e3c69ed78e4a
+langcode: nl
+status: true
+dependencies:
+  module:
+    - commerce_cart
+    - commerce_shipping
+third_party_settings:
+  commerce_shipping:
+    shipment_type: default
+  commerce_cart:
+    enable_cart_message: false
+_core:
+  default_config_hash: jn2Hj-04qG6O3dTtK8EaBB13jVPplONDb9L0Fat-0pI
+id: default
+label: Standaard
+traits: {  }
+locked: false
+workflow: order_default
+showOrderEditLinks: false
+numberPattern: order_default
+refresh_mode: customer
+refresh_frequency: 300
+sendReceipt: true
+receiptBcc: ''
+receiptSubject: ''

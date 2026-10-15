@@ -1,0 +1,14 @@
+uuid: 7af65619-4a93-46f8-a6a8-eb2c87322fda
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.blogbeheerder
+  module:
+    - user
+id: user_remove_role_action.blogbeheerder
+label: 'Remove the Blogbeheerder role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: blogbeheerder

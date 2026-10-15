@@ -1,0 +1,14 @@
+uuid: 8d78dc4b-ea5c-48eb-b20d-31e5e5a03164
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.klant
+  module:
+    - user
+id: user_remove_role_action.klant
+label: 'Remove the klant role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: klant

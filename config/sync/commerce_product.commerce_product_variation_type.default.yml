@@ -1,0 +1,13 @@
+uuid: 90ad3b9f-d5bb-4924-987c-b910348b3808
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 3vA4FKQ1Qu8B1R8UdGPnmMfJrYO6Y6uMqeNgDgXxods
+id: default
+label: Standaard
+traits:
+  - purchasable_entity_shippable
+locked: false
+orderItemType: default
+generateTitle: true

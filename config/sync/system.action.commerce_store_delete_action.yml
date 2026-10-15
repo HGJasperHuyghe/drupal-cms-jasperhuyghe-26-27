@@ -1,0 +1,16 @@
+uuid: 883161e1-4ed1-414c-ae24-3b678acf703a
+langcode: nl
+status: true
+dependencies:
+  module:
+    - commerce_store
+  enforced:
+    module:
+      - commerce_store
+_core:
+  default_config_hash: jF3zps2fK-ebAbUv5-Sz1yk2oy_VEsEGCSsOWviHEjY
+id: commerce_store_delete_action
+label: 'Winkel verwijderen'
+type: commerce_store
+plugin: 'entity:delete_action:commerce_store'
+configuration: {  }

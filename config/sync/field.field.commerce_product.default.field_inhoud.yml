@@ -1,0 +1,21 @@
+uuid: 5ecaf58a-cd25-4c89-9b6c-130c70958857
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - field.storage.commerce_product.field_inhoud
+id: commerce_product.default.field_inhoud
+field_name: field_inhoud
+entity_type: commerce_product
+bundle: default
+label: Inhoud
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 33cl
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,9 @@
+uuid: 7e226f0f-2e00-4648-8b9d-3bc858916f1d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Land van herkomst'
+vid: land_van_herkomst
+description: 'bijv. België, Duitsland, Nederland'
+weight: 0
+new_revision: false

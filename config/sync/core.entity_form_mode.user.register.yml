@@ -1,0 +1,13 @@
+uuid: 34356c55-5f04-44a1-a690-4bec890a463f
+langcode: nl
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: 1TFiplNN7Wmj_DtVLLLP-NLPYpZJdAswKY-vTrYgFyo
+id: user.register
+label: Registreren
+description: null
+targetEntityType: user
+cache: true

@@ -1,0 +1,14 @@
+uuid: f973750c-784f-46d5-8b0c-391f60fcaad6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.klant
+  module:
+    - user
+id: user_add_role_action.klant
+label: 'Add the klant role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: klant

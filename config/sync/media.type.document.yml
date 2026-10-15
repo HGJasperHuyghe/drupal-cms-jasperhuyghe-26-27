@@ -1,0 +1,16 @@
+uuid: b8d3e678-2ed9-40bc-9860-3d076be23c42
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QgF3JDg2h0tf2gaqzc4mNvlHttNkUpmxk1LZefP82hE
+id: document
+label: Document
+description: 'Een lokaal-opgeslagen document, zoals een PDF.'
+source: file
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_document
+field_map:
+  name: name

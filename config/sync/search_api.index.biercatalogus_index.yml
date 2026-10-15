@@ -1,0 +1,163 @@
+uuid: df954095-7c2a-4f90-8da2-fb8e83100569
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.commerce_product.body
+    - field.storage.commerce_product.field_alcoholpercentage
+    - field.storage.commerce_product.field_brouwerij
+    - field.storage.commerce_product.field_land_van_herkomst
+    - field.storage.commerce_product.field_stijl
+    - search_api.server.zoekserver
+  module:
+    - commerce_product
+id: biercatalogus_index
+name: biercatalogus_index
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:commerce_product'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product.body
+  field_alcoholpercentage:
+    label: Alcoholpercentage
+    datasource_id: 'entity:commerce_product'
+    property_path: field_alcoholpercentage
+    type: decimal
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_alcoholpercentage
+  field_brouwerij:
+    label: Brouwerij
+    datasource_id: 'entity:commerce_product'
+    property_path: field_brouwerij
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_brouwerij
+  field_land_van_herkomst:
+    label: 'Land van herkomst'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_land_van_herkomst
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_land_van_herkomst
+  field_stijl:
+    label: Bierstijl
+    datasource_id: 'entity:commerce_product'
+    property_path: field_stijl
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_stijl
+  price:
+    label: Price
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:price:number'
+    type: decimal
+    dependencies:
+      module:
+        - commerce_product
+  product_id:
+    label: ID
+    datasource_id: 'entity:commerce_product'
+    property_path: product_id
+    type: integer
+    dependencies:
+      module:
+        - commerce_product
+  title:
+    label: Title
+    datasource_id: 'entity:commerce_product'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - commerce_product
+  title_sort:
+    label: 'Title (sorteren)'
+    datasource_id: 'entity:commerce_product'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+  uid:
+    label: Author
+    datasource_id: 'entity:commerce_product'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - commerce_product
+datasource_settings:
+  'entity:commerce_product':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:commerce_product_attribute_value':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  html_filter:
+    all_fields: false
+    fields:
+      - body
+      - title
+    title: true
+    alt: true
+    tags:
+      b: 2.0
+      em: 1.5
+      h1: 5.0
+      h2: 3.0
+      h3: 2.0
+      strong: 2.0
+      u: 1.5
+  ignorecase:
+    all_fields: false
+    fields:
+      - body
+      - title
+  language_with_fallback: {  }
+  rendered_item: {  }
+  tokenizer:
+    all_fields: false
+    fields:
+      - body
+      - title
+    spaces: ''
+    ignored: ._-
+    overlap_cjk: 1
+    minimum_word_size: '3'
+  transliteration:
+    all_fields: false
+    fields:
+      - body
+      - title
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: zoekserver

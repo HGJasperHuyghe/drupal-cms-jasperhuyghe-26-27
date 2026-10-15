@@ -1,0 +1,29 @@
+uuid: 9d911cc0-c636-4b7a-b990-3a930884103f
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - field.storage.commerce_product.field_land_van_herkomst
+    - taxonomy.vocabulary.land_van_herkomst
+id: commerce_product.default.field_land_van_herkomst
+field_name: field_land_van_herkomst
+entity_type: commerce_product
+bundle: default
+label: 'Land van herkomst'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      land_van_herkomst: land_van_herkomst
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

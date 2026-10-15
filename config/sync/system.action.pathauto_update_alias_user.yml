@@ -1,0 +1,16 @@
+uuid: e30e617a-3c58-4d60-84bb-5bfcc96449d5
+langcode: nl
+status: true
+dependencies:
+  module:
+    - pathauto
+  enforced:
+    module:
+      - user
+_core:
+  default_config_hash: 6eiNWATGTd3lUEKuxNPNyDRDVMsUlM0HS90_R6JJLUI
+id: pathauto_update_alias_user
+label: 'URL-alias bijwerken'
+type: user
+plugin: pathauto_update_alias
+configuration: {  }

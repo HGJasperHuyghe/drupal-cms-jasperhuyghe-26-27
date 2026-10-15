@@ -1,0 +1,20 @@
+uuid: 8555986b-37a5-452a-8792-abcb3a6f5239
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - bierthema
+_core:
+  default_config_hash: y5BcECiccARKEYN07mj4l7Kl7UyVxh_ksmxhXvZXQOc
+id: bierthema_local_actions
+theme: bierthema
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primaire beheeracties'
+  label_display: '0'
+  provider: core
+visibility: {  }

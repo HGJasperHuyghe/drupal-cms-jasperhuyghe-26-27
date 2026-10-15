@@ -1,0 +1,11 @@
+uuid: 56183498-e241-4801-b09b-ccff79a66af8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.brouwerij
+id: taxonomy_term.brouwerij
+target_entity_type_id: taxonomy_term
+target_bundle: brouwerij
+default_langcode: site_default
+language_alterable: false

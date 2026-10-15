@@ -1,0 +1,8 @@
+uuid: 404db3be-4199-4642-b9b2-881e4c46ba83
+langcode: en
+status: true
+dependencies: {  }
+id: usp_block
+label: USP-block
+revision: false
+description: null

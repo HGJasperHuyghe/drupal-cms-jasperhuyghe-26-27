@@ -1,0 +1,14 @@
+uuid: dcecfc07-ca69-4d8f-a918-057bb6d6479a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: title_autopath
+label: title_autopath
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

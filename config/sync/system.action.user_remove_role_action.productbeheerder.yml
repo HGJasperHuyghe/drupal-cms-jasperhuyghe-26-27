@@ -1,0 +1,14 @@
+uuid: 48a8d6da-51b7-4764-9e64-1fbf67abc573
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.productbeheerder
+  module:
+    - user
+id: user_remove_role_action.productbeheerder
+label: 'Remove the Productbeheerder role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: productbeheerder

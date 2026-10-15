@@ -1,0 +1,14 @@
+uuid: bf9518ef-b33f-452f-883c-e528bb0054ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.werknemer
+  module:
+    - user
+id: user_remove_role_action.werknemer
+label: 'Remove the werknemer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: werknemer

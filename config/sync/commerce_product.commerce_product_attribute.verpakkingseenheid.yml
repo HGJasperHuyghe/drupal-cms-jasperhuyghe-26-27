@@ -1,0 +1,7 @@
+uuid: a0490483-00f7-4b8f-8a25-a2c99b41f11d
+langcode: en
+status: true
+dependencies: {  }
+id: verpakkingseenheid
+label: Verpakkingseenheid
+elementType: radios

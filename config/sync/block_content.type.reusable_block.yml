@@ -1,0 +1,13 @@
+uuid: ec950fef-4db4-41e0-875d-562f649e0725
+langcode: nl
+status: true
+dependencies:
+  enforced:
+    module:
+      - gutenberg
+_core:
+  default_config_hash: znLJG9-UVJFK_hojHzWbtdVAuRABLM3Sfu46ZIpDRlU
+id: reusable_block
+label: Patroon
+revision: false
+description: 'Build your pattern on Gutenberg editor and re-use it everywhere.'

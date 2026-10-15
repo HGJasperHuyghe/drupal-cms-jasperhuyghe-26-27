@@ -1,0 +1,10 @@
+uuid: 849401a9-953c-4ecd-8751-d2b78ef94c3a
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5VpawMrKPEPCkoO4YpPa0TDFO2dgiIHfTziJtwlmUxc
+id: html_yearless_date
+label: 'HTML datum zonder jaar'
+locked: true
+pattern: m-d

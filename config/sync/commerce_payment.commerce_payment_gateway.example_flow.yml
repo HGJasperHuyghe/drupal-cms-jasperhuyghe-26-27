@@ -1,0 +1,19 @@
+uuid: ee7ea50f-1c62-4ed1-abd2-adb4c694e2f4
+langcode: en
+status: false
+dependencies: {  }
+id: example_flow
+label: example_flow
+weight: null
+plugin: manual
+configuration:
+  display_label: Manual
+  mode: n/a
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+  instructions:
+    value: 'Schrijf het bedrag over naar BE0000000'
+    format: plain_text
+conditions: {  }
+conditionOperator: AND

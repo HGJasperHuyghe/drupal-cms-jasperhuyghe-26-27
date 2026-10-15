@@ -1,0 +1,117 @@
+uuid: 55ee90c4-f2e7-4fd6-9bc1-069bcf830177
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - taxonomy.vocabulary.bierstijl
+    - taxonomy.vocabulary.brouwerij
+    - taxonomy.vocabulary.land_van_herkomst
+  module:
+    - block_content
+    - comment
+    - commerce_checkout
+    - commerce_order
+    - commerce_product
+    - commerce_store
+    - content_translation
+    - contextual
+    - field_ui
+    - media
+    - node
+    - profile
+    - system
+    - taxonomy
+    - toolbar
+id: productbeheerder
+label: Productbeheerder
+weight: 7
+is_admin: false
+permissions:
+  - 'access commerce_product overview'
+  - 'access commerce_product_attribute overview'
+  - 'access commerce_store overview'
+  - 'access contextual links'
+  - 'access media overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer block_content display'
+  - 'administer block_content fields'
+  - 'administer block_content form display'
+  - 'administer comment display'
+  - 'administer comment fields'
+  - 'administer comment form display'
+  - 'administer commerce_checkout_flow'
+  - 'administer commerce_order'
+  - 'administer commerce_order display'
+  - 'administer commerce_order fields'
+  - 'administer commerce_order form display'
+  - 'administer commerce_order_item display'
+  - 'administer commerce_order_item fields'
+  - 'administer commerce_order_item form display'
+  - 'administer commerce_order_type'
+  - 'administer commerce_product'
+  - 'administer commerce_product display'
+  - 'administer commerce_product fields'
+  - 'administer commerce_product form display'
+  - 'administer commerce_product_attribute'
+  - 'administer commerce_product_attribute_value display'
+  - 'administer commerce_product_attribute_value fields'
+  - 'administer commerce_product_attribute_value form display'
+  - 'administer commerce_product_type'
+  - 'administer commerce_product_variation display'
+  - 'administer commerce_product_variation fields'
+  - 'administer commerce_product_variation form display'
+  - 'administer commerce_store'
+  - 'administer commerce_store display'
+  - 'administer commerce_store fields'
+  - 'administer commerce_store form display'
+  - 'administer commerce_store_type'
+  - 'administer media display'
+  - 'administer media fields'
+  - 'administer media form display'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer node form display'
+  - 'administer profile display'
+  - 'administer profile fields'
+  - 'administer profile form display'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term fields'
+  - 'administer taxonomy_term form display'
+  - 'administer user display'
+  - 'administer user fields'
+  - 'administer user form display'
+  - 'create commerce_product_attribute'
+  - 'create default commerce_product'
+  - 'create image media'
+  - 'create online commerce_store'
+  - 'create terms in bierstijl'
+  - 'create terms in brouwerij'
+  - 'create terms in land_van_herkomst'
+  - 'delete any default commerce_product'
+  - 'delete any online commerce_store'
+  - 'delete commerce_product_attribute'
+  - 'delete own default commerce_product'
+  - 'delete own online commerce_store'
+  - 'duplicate any online commerce_store'
+  - 'duplicate own online commerce_store'
+  - 'edit terms in bierstijl'
+  - 'edit terms in brouwerij'
+  - 'edit terms in land_van_herkomst'
+  - 'manage default commerce_product_variation'
+  - 'translate commerce_product_attribute'
+  - 'translate commerce_product_attribute_value'
+  - 'update any default commerce_product'
+  - 'update any online commerce_store'
+  - 'update commerce_product_attribute'
+  - 'update own default commerce_product'
+  - 'update own online commerce_store'
+  - 'view commerce_product'
+  - 'view commerce_product_attribute'
+  - 'view commerce_store'
+  - 'view default commerce_product'
+  - 'view online commerce_store'
+  - 'view own unpublished commerce_product'
+  - 'view own unpublished commerce_store'
+  - 'view the administration theme'

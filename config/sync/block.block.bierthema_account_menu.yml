@@ -1,0 +1,27 @@
+uuid: 36b703c0-38a8-4239-af5a-3546f943b456
+langcode: nl
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - bierthema
+_core:
+  default_config_hash: 1akGY8iW53t3TQI5gDdv-OMFUHMXOQ8rdxZwdSLiL7k
+id: bierthema_account_menu
+theme: bierthema
+region: nav_additional
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: Gebruikersmenu
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

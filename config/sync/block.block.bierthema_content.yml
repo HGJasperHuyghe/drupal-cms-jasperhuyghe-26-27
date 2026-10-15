@@ -1,0 +1,22 @@
+uuid: b1dfc659-1b15-46a6-b258-64a4ecbf4080
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bierthema
+_core:
+  default_config_hash: kRfLQ7C_af_-N9oIPyBOmojeR_cFfAWkeymLrI7S-pM
+id: bierthema_content
+theme: bierthema
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Primaire inhoud van de pagina'
+  label_display: '0'
+  provider: system
+visibility: {  }

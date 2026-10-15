@@ -1,0 +1,27 @@
+uuid: d3d191ae-289f-43f4-9482-29afe7b91d19
+langcode: nl
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - bierthema
+_core:
+  default_config_hash: KV-u-XwJwAORGJapJesjejwUGAmEySlOoIgg-vdGLzE
+id: bierthema_footer
+theme: bierthema
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Voet
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

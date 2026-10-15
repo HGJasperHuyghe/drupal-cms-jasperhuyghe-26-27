@@ -1,0 +1,25 @@
+uuid: b8b75120-ec44-449a-aa1a-cb46bd35f54d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - biershop_thema
+_core:
+  default_config_hash: nuW1Z5MdvzbCCEZ9RQojaEWB6Zni32zTq-v5OWbS2sc
+id: biershop_thema_branding
+theme: biershop_thema
+region: header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

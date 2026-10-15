@@ -1,0 +1,20 @@
+uuid: b0468d9c-0bbe-4c73-b82a-46149135fc84
+langcode: en
+status: true
+dependencies:
+  theme:
+    - biershop_thema
+_core:
+  default_config_hash: MBqG1B5mr5-fPSCDyTR6z2zVTRxZ10XeS_pAw6C7za4
+id: biershop_thema_local_actions
+theme: biershop_thema
+region: content
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

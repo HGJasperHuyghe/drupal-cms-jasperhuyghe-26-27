@@ -1,0 +1,14 @@
+uuid: b3afc9dc-98a2-4fbe-95a1-de532f648a65
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.blogbeheerder
+  module:
+    - user
+id: user_add_role_action.blogbeheerder
+label: 'Add the Blogbeheerder role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: blogbeheerder

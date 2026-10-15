@@ -1,0 +1,22 @@
+uuid: 85cd1a94-83ad-429c-ae70-3591500a6c93
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - biershop_thema
+id: biershop_thema_cart
+theme: biershop_thema
+region: header
+weight: 0
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Winkelwagen
+  label_display: '0'
+  provider: commerce_cart
+  dropdown: true
+  show_if_empty: true
+visibility: {  }

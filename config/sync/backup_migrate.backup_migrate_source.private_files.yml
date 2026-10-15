@@ -1,0 +1,12 @@
+uuid: 08c66442-5246-4ce4-bb51-7363da954eae
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: skfrgCS5JC2HXCG6QfQfiuuFWy_-OQ5Qs0FvaPwc6Vc
+id: private_files
+label: 'Map voor afgeschermde bestanden'
+type: DrupalFiles
+config:
+  name: 'Private Files Directory'
+  directory: 'private://'

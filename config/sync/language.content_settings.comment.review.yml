@@ -1,0 +1,11 @@
+uuid: cbb41645-5f4a-4fd4-9d29-a3093e3d4147
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+id: comment.review
+target_entity_type_id: comment
+target_bundle: review
+default_langcode: site_default
+language_alterable: false

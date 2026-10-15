@@ -1,0 +1,16 @@
+uuid: d6606894-1dfe-40ef-9ca6-c9d7e965892b
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: VWUWqwszm5ZaqT3frIPWjyyVmvmWnWMFRphkVXCl8t0
+id: image
+label: Afbeelding
+description: 'Een lokaal-opgeslagen afbeelding.'
+source: image
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name

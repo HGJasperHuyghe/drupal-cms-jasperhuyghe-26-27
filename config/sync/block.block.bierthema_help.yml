@@ -1,0 +1,22 @@
+uuid: 992a612d-cbf0-42ee-ae5e-27c4f1be1118
+langcode: nl
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bierthema
+_core:
+  default_config_hash: gVhuc-85zJbuc6P_x3X1pEEkNrXQf8lS4PTu7YHJ6wQ
+id: bierthema_help
+theme: bierthema
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: 2c0b9c69-283f-4bce-80de-8bbef80caada
+langcode: nl
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - bierthema
+_core:
+  default_config_hash: 2uGTn_skGeyPKRZYxOZl-MW8Iye68i3aXUPYhVaIKtI
+id: bierthema_main_navigation
+theme: bierthema
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: Hoofdnavigatie
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

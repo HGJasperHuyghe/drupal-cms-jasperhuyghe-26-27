@@ -1,0 +1,22 @@
+uuid: 3452e0ea-85e5-4250-b6c0-8428e75bbc28
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bierthema
+_core:
+  default_config_hash: xjbojS49WtuGsnaV_lNCqt47uhgkkgBHPxW2WMxj1b4
+id: bierthema_breadcrumbs
+theme: bierthema
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Kruimelpad
+  label_display: '0'
+  provider: system
+visibility: {  }

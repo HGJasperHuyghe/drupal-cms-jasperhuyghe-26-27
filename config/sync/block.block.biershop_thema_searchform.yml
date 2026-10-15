@@ -1,0 +1,21 @@
+uuid: cbacc9f0-1f93-4b04-8af8-2a554d7239f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - biershop_thema
+id: biershop_thema_searchform
+theme: biershop_thema
+region: header
+weight: -2
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: help_search
+visibility: {  }

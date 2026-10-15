@@ -1,0 +1,13 @@
+uuid: 595b1c14-d610-4445-a42b-d0af29582e2f
+langcode: nl
+status: true
+dependencies:
+  module:
+    - commerce_shipping
+_core:
+  default_config_hash: SOM4LMI0fFeahHJLPEPoVldiWGePCGwhTERi0cTjb0U
+id: commerce_shipment.checkout
+label: Afrekenen
+description: null
+targetEntityType: commerce_shipment
+cache: true

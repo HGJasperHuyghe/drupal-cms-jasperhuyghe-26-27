@@ -1,0 +1,8 @@
+uuid: cf132f62-fc85-4891-840a-933f41249011
+langcode: en
+status: true
+dependencies: {  }
+id: footer-klantenservice
+label: Footer_Klantenservice
+description: ''
+locked: false

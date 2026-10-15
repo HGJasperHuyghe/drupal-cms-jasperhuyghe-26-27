@@ -1,0 +1,23 @@
+uuid: 7923f4d4-62f9-4374-93e9-993d677a5022
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:usp_block:261cde01-1400-478d-b5e1-4002c245f399'
+  module:
+    - block_content
+  theme:
+    - biershop_thema
+id: biershop_thema_headerusps
+theme: biershop_thema
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:261cde01-1400-478d-b5e1-4002c245f399'
+settings:
+  id: 'block_content:261cde01-1400-478d-b5e1-4002c245f399'
+  label: 'Header USPs'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

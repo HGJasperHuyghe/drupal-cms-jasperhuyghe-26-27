@@ -1,0 +1,15 @@
+uuid: 61164353-4690-4e81-b92f-469cdc69a212
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: zoekserver
+name: zoekserver
+description: 'server om search api te gebruiken'
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  matching: prefix
+  phrase: bigram

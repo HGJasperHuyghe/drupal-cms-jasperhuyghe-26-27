@@ -1,0 +1,13 @@
+uuid: 959cf0d1-a407-4a30-9346-2e5605123ee3
+langcode: nl
+status: true
+dependencies:
+  module:
+    - commerce_product
+_core:
+  default_config_hash: ry5RvX-mOnp2GQWzMqSYjPz-jKfP1nSo4Xo4kJCodlE
+id: commerce_product_attribute_value.add_to_cart
+label: "Formulier 'Toevoegen aan winkelwagen'"
+description: null
+targetEntityType: commerce_product_attribute_value
+cache: true

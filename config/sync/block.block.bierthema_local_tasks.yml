@@ -1,0 +1,22 @@
+uuid: a2f8a82d-7096-4514-b3a4-5e49f93a91eb
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - bierthema
+_core:
+  default_config_hash: sK14z7u-dWhzh1m6BfW5CWaFWjjKU8gJDZCMZrTPvpg
+id: bierthema_local_tasks
+theme: bierthema
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabbladen
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

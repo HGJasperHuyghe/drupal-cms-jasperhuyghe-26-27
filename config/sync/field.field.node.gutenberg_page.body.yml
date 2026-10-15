@@ -1,0 +1,24 @@
+uuid: 53e99312-7bea-44e1-9b24-f81dc5cf02d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.gutenberg_page
+  module:
+    - text
+id: node.gutenberg_page.body
+field_name: body
+entity_type: node
+bundle: gutenberg_page
+label: Inhoud
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

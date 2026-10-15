@@ -1,0 +1,11 @@
+uuid: a6cbd7eb-f26a-4775-8690-be5a8fa2b2b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.gutenberg_page
+id: node.gutenberg_page
+target_entity_type_id: node
+target_bundle: gutenberg_page
+default_langcode: site_default
+language_alterable: false

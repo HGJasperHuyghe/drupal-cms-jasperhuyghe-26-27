@@ -1,0 +1,9 @@
+uuid: 78993521-b30a-4f09-a031-c155bf16103e
+langcode: en
+status: true
+dependencies: {  }
+id: klant
+label: klant
+weight: 5
+is_admin: false
+permissions: {  }

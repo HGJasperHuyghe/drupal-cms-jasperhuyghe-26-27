@@ -1,0 +1,29 @@
+uuid: c56d1993-8f1e-434e-b0d3-5f3e1db62d01
+langcode: nl
+status: true
+dependencies:
+  config:
+    - views.view.bieren_zelfde_brouwerij
+  module:
+    - system
+    - views
+  theme:
+    - biershop_thema
+id: biershop_thema_zelfde_brouwerij
+theme: biershop_thema
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:bieren_zelfde_brouwerij-block_1'
+settings:
+  id: 'views_block:bieren_zelfde_brouwerij-block_1'
+  label: 'Bieren van dezelfde brouwerij'
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/product/*'

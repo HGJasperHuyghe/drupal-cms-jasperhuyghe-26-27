@@ -1,0 +1,9 @@
+uuid: 933567ae-0812-4693-b6ea-ed74c29dddf6
+langcode: en
+status: true
+dependencies: {  }
+name: Brouwerij
+vid: brouwerij
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,9 @@
+uuid: c7405e4d-a5e0-466a-b07d-2d8092bbe8c8
+langcode: en
+status: true
+dependencies: {  }
+name: Bierstijl
+vid: bierstijl
+description: 'bijv. IPA, Tripel, Stout, Blond)'
+weight: 0
+new_revision: false

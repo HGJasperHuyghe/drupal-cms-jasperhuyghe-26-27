@@ -1,0 +1,22 @@
+uuid: 8066d693-275d-4a17-bb92-063bef82c9c5
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bierthema
+_core:
+  default_config_hash: ZZeDTlGMTeoc21jUu-KBXH7k-ctS2FrQOrUAWnct4Os
+id: bierthema_powered_by_drupal
+theme: bierthema
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Gebouwd met Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

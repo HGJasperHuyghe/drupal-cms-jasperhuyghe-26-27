@@ -1,0 +1,21 @@
+uuid: b332c556-342e-48af-8005-2760987b27c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - footer
+      - main
+      - navigation-user-links
+      - account
+    parent: 'main:'
+name: Homepage
+type: homepage
+description: null
+help: null
+new_revision: true
+preview_mode: 2
+display_submitted: false

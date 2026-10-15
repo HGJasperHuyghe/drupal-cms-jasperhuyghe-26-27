@@ -1,0 +1,7 @@
+label: Standaard
+configuration:
+  panes:
+    completion_message:
+      message:
+        value: "Bedankt voor je bestelling! Je bestelnummer is [commerce_order:order_number].\r\nJe ontvangt een bevestiging per e-mail. Als je bent ingelogd, vind je de bestelling ook terug onder Mijn account."
+        format: plain_text
