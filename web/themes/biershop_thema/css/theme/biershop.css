@@ -646,3 +646,64 @@ footer,
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+/* "Bieren van dezelfde brouwerij" in the sidebar of product pages. */
+.block-views-blockbieren-zelfde-brouwerij-block-1 {
+  background: var(--beer-paper);
+  border: 1px solid var(--beer-line);
+  border-radius: var(--beer-radius);
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+}
+
+.block-views-blockbieren-zelfde-brouwerij-block-1 > h2 {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.zelfde-brouwerij__lijst {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.zelfde-brouwerij__item {
+  align-items: center;
+  border-top: 1px solid var(--beer-line);
+  display: flex;
+  gap: .75rem;
+  padding: .65rem 0;
+}
+
+.zelfde-brouwerij__item:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.zelfde-brouwerij__item .field-content {
+  padding: 0;
+}
+
+.zelfde-brouwerij__item img {
+  background: #f5efe6;
+  border-radius: 6px;
+  height: 64px;
+  object-fit: contain;
+  width: 64px;
+}
+
+.zelfde-brouwerij__item .views-field-title a {
+  color: var(--beer-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.zelfde-brouwerij__item .views-field-title a:hover,
+.zelfde-brouwerij__item .views-field-title a:focus {
+  color: var(--beer-amber);
+  text-decoration: underline;
+}
+
+.zelfde-brouwerij__leeg {
+  color: var(--beer-muted);
+  margin: 0;
+}
