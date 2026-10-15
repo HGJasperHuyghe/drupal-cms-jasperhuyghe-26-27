@@ -1,0 +1,8 @@
+services:
+  _defaults:
+    autowire: true
+
+  biershop_cart.cart_subscriber:
+    class: Drupal\biershop_cart\EventSubscriber\CartSubscriber
+    tags:
+      - { name: event_subscriber }

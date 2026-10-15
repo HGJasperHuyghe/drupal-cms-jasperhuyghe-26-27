@@ -1,5 +1,8 @@
 # Main theme library.
 global:
+  # Load Bootstrap first on every page, so the theme's styles override it.
+  dependencies:
+    - bootstrap5/global-styling
   js:
     js/biershop-thema.js: {}
   css:
@@ -25,4 +28,5 @@ global:
       css/layout/layout.css: {}
     theme:
       css/theme/biershop.css: {}
+      css/theme/gutenberg.css: {}
       css/theme/print.css: { media: print }

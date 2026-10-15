@@ -1,0 +1,242 @@
+/**
+ * @file
+ * Styling for content built with the Gutenberg editor (content type
+ * "Gutenberg pagina"). Uses the tokens from biershop.css.
+ *
+ * Reusable classes, set per block in the editor via "Advanced > Additional
+ * CSS class(es)":
+ * - pagina-intro (Group): intro text, optionally next to an image.
+ * - pagina-kaarten (Columns) with kaart (Column): cards; kaart__link on the
+ *   last paragraph pins it to the bottom. Colour modifiers: bierstijl--*.
+ * - pagina-band (Group): dark band, e.g. for links and buttons at the end.
+ * - pagina-faq (Group) with Details blocks: questions that fold open.
+ * - pagina-map (Custom HTML wrapper): embedded map.
+ */
+
+.node--type-gutenberg-page .field--name-body {
+  padding-inline: 0;
+}
+
+.node--type-gutenberg-page .field--name-body > * + * {
+  margin-top: 1.25rem;
+}
+
+.node--type-gutenberg-page .field--name-body > h2.wp-block-heading {
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Intro: text next to the photo. */
+.pagina-intro {
+  align-items: center;
+  background: #f5efe6;
+  border-radius: var(--beer-radius);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.1fr 1fr;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.pagina-intro:not(:has(> .wp-block-image)) {
+  grid-template-columns: 1fr;
+}
+
+.pagina-intro > * {
+  margin: 0;
+}
+
+.pagina-intro__tekst {
+  color: var(--beer-dark);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.pagina-intro .wp-block-image img {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--beer-radius);
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Cards (columns with class "kaart"); a modifier sets --kaart-kleur. */
+.pagina-kaarten.wp-block-columns {
+  gap: 1.25rem;
+  margin-bottom: 0;
+}
+
+.kaart {
+  --kaart-kleur: var(--beer-gold);
+  background: var(--beer-paper);
+  border: 1px solid var(--beer-line);
+  border-top: 5px solid var(--kaart-kleur);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.25rem 1rem;
+}
+
+.kaart > * {
+  margin: 0;
+}
+
+.kaart > * + * {
+  margin-top: .6rem;
+}
+
+.kaart h3.wp-block-heading {
+  font-size: 1.3rem;
+}
+
+.kaart p {
+  color: var(--beer-muted);
+}
+
+.kaart .kaart__link {
+  margin-top: auto;
+  padding-top: .75rem;
+}
+
+.kaart .kaart__link a {
+  color: var(--beer-amber);
+  font-weight: 700;
+}
+
+.bierstijl--pils      { --kaart-kleur: #f2cf5b; }
+.bierstijl--witbier   { --kaart-kleur: #eadba5; }
+.bierstijl--blond     { --kaart-kleur: #e9b949; }
+.bierstijl--amber     { --kaart-kleur: #c56a22; }
+.bierstijl--bruin     { --kaart-kleur: #6b3e1f; }
+.bierstijl--dubbel    { --kaart-kleur: #7a3520; }
+.bierstijl--tripel    { --kaart-kleur: #e7a83f; }
+.bierstijl--quadrupel { --kaart-kleur: #3b1f12; }
+.bierstijl--trappist  { --kaart-kleur: #4a2c1a; }
+.bierstijl--ipa       { --kaart-kleur: #d98b2b; }
+
+.kaart--tip {
+  background: #f5efe6;
+  border-top-color: var(--beer-line);
+}
+
+/* FAQ: Details blocks inside a Group with class "pagina-faq". */
+.pagina-faq > * + * {
+  margin-top: .5rem;
+}
+
+.pagina-faq .wp-block-details {
+  background: var(--beer-paper);
+  border: 1px solid var(--beer-line);
+  border-radius: 6px;
+  padding: .85rem 1.1rem;
+}
+
+.pagina-faq .wp-block-details summary {
+  color: var(--beer-dark);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.pagina-faq .wp-block-details[open] summary {
+  margin-bottom: .5rem;
+}
+
+.pagina-faq .wp-block-details p {
+  color: var(--beer-muted);
+  margin: 0;
+}
+
+/* Embedded map (Custom HTML block). */
+.pagina-map {
+  border: 1px solid var(--beer-line);
+  border-radius: var(--beer-radius);
+  overflow: hidden;
+}
+
+.pagina-map iframe {
+  border: 0;
+  display: block;
+  height: 420px;
+  width: 100%;
+}
+
+/* Dark band at the bottom. */
+.pagina-band {
+  background: var(--beer-dark);
+  border-radius: var(--beer-radius);
+  color: #f3e6d3;
+  margin-top: 3.5rem !important;
+  padding: clamp(1.5rem, 5vw, 2.75rem);
+}
+
+.pagina-band > * {
+  margin-block: 0;
+}
+
+.pagina-band > * + * {
+  margin-top: 1rem;
+}
+
+.pagina-band h2.wp-block-heading {
+  color: #fff7ea;
+}
+
+.pagina-band a {
+  color: var(--beer-gold);
+}
+
+.pagina-band a:hover,
+.pagina-band a:focus {
+  color: #fff;
+}
+
+.pagina-band ul {
+  padding-left: 1.25rem;
+}
+
+.pagina-band li + li {
+  margin-top: .35rem;
+}
+
+.pagina-band .wp-block-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1.5rem;
+}
+
+.pagina-band .wp-block-button__link {
+  background: var(--beer-amber);
+  border: 2px solid var(--beer-amber);
+  border-radius: 5px;
+  color: #fff;
+  font-size: .86rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  padding: .7rem 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pagina-band .wp-block-button__link:hover,
+.pagina-band .wp-block-button__link:focus {
+  background: #fff7ea;
+  border-color: #fff7ea;
+  color: var(--beer-dark);
+}
+
+.pagina-band .is-style-outline .wp-block-button__link {
+  background: transparent;
+  border-color: #f3e6d3;
+  color: #f3e6d3;
+}
+
+@media (max-width: 781.98px) {
+  .pagina-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .pagina-map iframe {
+    height: 320px;
+  }
+}

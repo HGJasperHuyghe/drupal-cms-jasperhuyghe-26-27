@@ -1,0 +1,4 @@
+account:
+  css:
+    component:
+      css/account.css: {}

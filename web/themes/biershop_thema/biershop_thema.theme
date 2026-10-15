@@ -116,6 +116,39 @@ function biershop_thema_form_search_block_form_alter(array &$form, \Drupal\Core\
     $form['keys']['#name'] = 'search_api_fulltext';
     $form['keys']['#placeholder'] = 'Zoek in onze bieren';
   }
+  if (isset($form['actions']['submit'])) {
+    $form['actions']['submit']['#value'] = 'Zoeken';
+  }
 
   $form['#action'] = '/biercatalogus';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for views_exposed_form.
+ *
+ * Gives the "any" option of the catalog filters a descriptive Dutch label.
+ */
+function biershop_thema_form_views_exposed_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state, string $form_id): void {
+  if (($form['#id'] ?? '') !== 'views-exposed-form-biercatalogus-page-1') {
+    return;
+  }
+
+  $any_labels = [
+    'field_stijl' => 'Alle stijlen',
+    'field_brouwerij' => 'Alle brouwerijen',
+  ];
+  foreach ($any_labels as $element => $label) {
+    if (isset($form[$element]['#options']['All'])) {
+      $form[$element]['#options']['All'] = $label;
+    }
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for commerce_order_item_add_to_cart_form.
+ */
+function biershop_thema_form_commerce_order_item_add_to_cart_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state, string $form_id): void {
+  if (isset($form['actions']['submit'])) {
+    $form['actions']['submit']['#value'] = 'In winkelmandje';
+  }
 }

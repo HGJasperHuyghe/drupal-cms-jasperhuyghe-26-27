@@ -1,0 +1,38 @@
+/**
+ * @file
+ * Account overview on the user page. Uses the biershop_thema tokens when
+ * available.
+ */
+
+.account-overzicht {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 2fr 1fr;
+  margin-block: 1.5rem;
+}
+
+.account-overzicht__kaart {
+  background: var(--beer-paper, #fffdf9);
+  border: 1px solid var(--beer-line, #e8ded1);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.account-overzicht__kaart h2 {
+  font-size: 1.35rem;
+  margin: 0 0 .75rem;
+}
+
+.account-overzicht__kaart table {
+  margin-bottom: .75rem;
+}
+
+.account-overzicht__link {
+  font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+  .account-overzicht {
+    grid-template-columns: 1fr;
+  }
+}

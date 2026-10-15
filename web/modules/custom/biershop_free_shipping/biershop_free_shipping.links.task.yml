@@ -1,0 +1,10 @@
+biershop_free_shipping.settings:
+  title: 'Settings'
+  route_name: biershop_free_shipping.settings
+  base_route: biershop_free_shipping.settings
+
+biershop_free_shipping.report:
+  title: 'Overview'
+  route_name: biershop_free_shipping.report
+  base_route: biershop_free_shipping.settings
+  weight: 10

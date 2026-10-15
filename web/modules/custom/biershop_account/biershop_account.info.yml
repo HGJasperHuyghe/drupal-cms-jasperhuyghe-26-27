@@ -1,0 +1,9 @@
+name: Biershop account
+type: module
+description: Turns the customer account page into an overview with recent orders and a link to change e-mail and password.
+package: Custom
+core_version_requirement: ^11.1
+dependencies:
+  - drupal:user
+  - drupal:views
+  - commerce:commerce_order

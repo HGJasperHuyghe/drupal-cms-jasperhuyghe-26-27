@@ -32,7 +32,8 @@
           {{ page.sidebar_first }}
         </aside>
       {% endif %}
-      <div class="col-12{% if page.sidebar_first %} col-lg-9{% endif %} order-1 order-lg-2">
+      {% set sidebar_count = (page.sidebar_first ? 1 : 0) + (page.sidebar_second ? 1 : 0) %}
+      <div class="col-12{{ sidebar_count == 2 ? ' col-lg-6' : (sidebar_count == 1 ? ' col-lg-9') }} order-1 order-lg-2">
         {{ page.content }}
       </div>
       {% if page.sidebar_second %}

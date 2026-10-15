@@ -13,3 +13,12 @@ services:
     class: Drupal\biershop_free_shipping\OrderProcessor\FreeShippingOrderProcessor
     tags:
       - { name: commerce_order.order_processor, priority: 0 }
+
+  biershop_free_shipping.log:
+    class: Drupal\biershop_free_shipping\FreeShippingLog
+  Drupal\biershop_free_shipping\FreeShippingLog: '@biershop_free_shipping.log'
+
+  biershop_free_shipping.order_place_subscriber:
+    class: Drupal\biershop_free_shipping\EventSubscriber\OrderPlaceSubscriber
+    tags:
+      - { name: event_subscriber }

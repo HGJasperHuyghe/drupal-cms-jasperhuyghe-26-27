@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Install and uninstall functions for biershop_cart.
+ */
+
+declare(strict_types=1);
+
+use Drupal\commerce_order\Entity\OrderType;
+
+/**
+ * Implements hook_install().
+ *
+ * Disables the default Commerce message; this module shows its own.
+ */
+function biershop_cart_install(): void {
+  _biershop_cart_set_commerce_message(FALSE);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function biershop_cart_uninstall(): void {
+  _biershop_cart_set_commerce_message(TRUE);
+}
+
+/**
+ * Enables or disables the default Commerce add to cart message.
+ */
+function _biershop_cart_set_commerce_message(bool $enabled): void {
+  foreach (OrderType::loadMultiple() as $order_type) {
+    $order_type->setThirdPartySetting('commerce_cart', 'enable_cart_message', $enabled);
+    $order_type->save();
+  }
+}

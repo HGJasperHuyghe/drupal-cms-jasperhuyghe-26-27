@@ -1,0 +1,90 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for biershop_free_shipping.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_schema().
+ */
+function biershop_free_shipping_schema(): array {
+  $schema['biershop_free_shipping_log'] = [
+    'description' => 'Placed orders that received free shipping.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'Primary key.',
+      ],
+      'order_id' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'The commerce_order ID.',
+      ],
+      'uid' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'The customer user ID, 0 for guest checkout.',
+      ],
+      'subtotal' => [
+        'type' => 'numeric',
+        'precision' => 19,
+        'scale' => 6,
+        'not null' => TRUE,
+        'description' => 'Subtotal that counted towards the threshold.',
+      ],
+      'shipping_waived' => [
+        'type' => 'numeric',
+        'precision' => 19,
+        'scale' => 6,
+        'not null' => TRUE,
+        'description' => 'Shipping costs the customer did not have to pay.',
+      ],
+      'threshold' => [
+        'type' => 'numeric',
+        'precision' => 19,
+        'scale' => 6,
+        'not null' => TRUE,
+        'description' => 'Threshold that applied when the order was placed.',
+      ],
+      'currency_code' => [
+        'type' => 'varchar_ascii',
+        'length' => 3,
+        'not null' => TRUE,
+        'description' => 'Currency of the amounts.',
+      ],
+      'created' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'Unix timestamp when the order was placed.',
+      ],
+    ],
+    'primary key' => ['id'],
+    'unique keys' => [
+      'order_id' => ['order_id'],
+    ],
+    'indexes' => [
+      'created' => ['created'],
+    ],
+  ];
+
+  return $schema;
+}
+
+/**
+ * Creates the free shipping log table.
+ */
+function biershop_free_shipping_update_11001(): string {
+  $schema = \Drupal::database()->schema();
+  if (!$schema->tableExists('biershop_free_shipping_log')) {
+    $schema->createTable('biershop_free_shipping_log', biershop_free_shipping_schema()['biershop_free_shipping_log']);
+  }
+  return 'Created the biershop_free_shipping_log table.';
+}

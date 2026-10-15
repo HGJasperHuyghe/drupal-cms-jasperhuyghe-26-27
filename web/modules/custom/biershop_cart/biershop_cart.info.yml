@@ -1,0 +1,7 @@
+name: Biershop cart
+type: module
+description: Shows a clear Dutch confirmation with a link to the cart when a product is added.
+package: Custom
+core_version_requirement: ^11.1
+dependencies:
+  - commerce:commerce_cart

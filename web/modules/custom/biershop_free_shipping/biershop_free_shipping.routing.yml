@@ -5,3 +5,11 @@ biershop_free_shipping.settings:
     _title: 'Free shipping'
   requirements:
     _permission: 'administer biershop free shipping'
+
+biershop_free_shipping.report:
+  path: '/admin/commerce/config/shipping/free-shipping/overview'
+  defaults:
+    _controller: '\Drupal\biershop_free_shipping\Controller\FreeShippingReportController::overview'
+    _title: 'Free shipping overview'
+  requirements:
+    _permission: 'view biershop free shipping report'

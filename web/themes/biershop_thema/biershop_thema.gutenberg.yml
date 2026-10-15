@@ -1,0 +1,92 @@
+# Gutenberg-instellingen voor biershop_thema.
+# Gebaseerd op olivero.gutenberg.yml uit de gutenberg-module; kleuren en
+# editorstijl volgen de tokens uit css/theme/biershop.css.
+theme-support:
+  alignWide: true
+  supportsLayout: true
+  allowedBlockTypes: true
+
+  disableLayoutStyles: false
+  __unstableIsBlockBasedTheme: false
+
+  allowedMimeTypes:
+    jpg|jpeg|jpe: image/jpeg
+    png: image/png
+    gif: image/gif
+    mp3|m4a|m4b: audio/mpeg
+    mov|qt: video/quicktime
+    avi: video/avi
+    wmv: video/x-ms-wmv
+    mid|midi: audio/midi
+    pdf: application/pdf
+    mp4|m4v: video/mp4
+    webm: video/webm
+    ogv: video/ogg
+    txt|asc|c|cc|h|srt: text/plain
+    webp: image/webp
+  blockCategories:
+  - slug: text
+    title: Text
+    icon:
+  - slug: media
+    title: Media
+    icon:
+  - slug: design
+    title: Design
+    icon:
+  - slug: widgets
+    title: Widgets
+    icon:
+  - slug: theme
+    title: Theme
+    icon:
+  - slug: embed
+    title: Embeds
+    icon:
+  - slug: reusable
+    title: Reusable Blocks
+    icon:
+  disableCustomColors: false
+  disableCustomFontSizes: true
+  disableCustomGradients: false
+  enableCustomLineHeight: false
+  enableCustomSpacing: false
+  enableCustomUnits: false
+  isRTL: false
+  imageDefaultSize: original
+  imageEditing: true
+  colors:
+  - name: Donkerbruin
+    slug: beer-dark
+    color: "#34251d"
+  - name: Amber
+    slug: beer-amber
+    color: "#c56a22"
+  - name: Goud
+    slug: beer-gold
+    color: "#e7a83f"
+  - name: Crème
+    slug: beer-cream
+    color: "#fbf7ef"
+  - name: Zand
+    slug: beer-sand
+    color: "#f4e7d3"
+  - name: Grijsbruin
+    slug: beer-muted
+    color: "#6f6257"
+  - name: Wit
+    slug: white
+    color: "#ffffff"
+  availableTemplates: []
+  disablePostFormats: true
+  titlePlaceholder: Titel van de pagina
+  bodyPlaceholder: Begin te schrijven of typ / om een blok te kiezen
+  autosaveInterval: 0
+  styles:
+    - css: |-
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;800&family=Oswald:wght@500;700&display=swap');
+        body { color: #201914; font-family: "Mulish", sans-serif; line-height: 1.6; }
+        h1, h2, h3, h4, h5, h6 { color: #34251d; font-family: "Oswald", sans-serif; font-weight: 700; }
+        a { color: #c56a22; }
+      isGlobalStyles: true
+      __unstableType: theme
